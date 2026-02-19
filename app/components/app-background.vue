@@ -1,4 +1,6 @@
 <script setup>
+const showGif = useState('showGif', () => true)
+
 const x = ref(0)
 const y = ref(0)
 const gifX = ref(0)
@@ -10,8 +12,8 @@ let animationFrame
 const lerp = (start, end, speed) => start + (end - start) * speed
 
 const animate = () => {
-  gifX.value = lerp(gifX.value, x.value, 0.1)
-  gifY.value = lerp(gifY.value, y.value, 0.1)
+  gifX.value = lerp(gifX.value, x.value, 0.03)
+  gifY.value = lerp(gifY.value, y.value, 0.03)
   animationFrame = requestAnimationFrame(animate)
 }
 
@@ -33,7 +35,8 @@ onUnmounted(() => {
 
 <template>
     <div class="fixed inset-0 -z-10 overflow-hidden">
-        <img :src="gifSrc" class="pointer-events-none absolute w-30 h-30"
-            :style="{ left: `${gifX + 60}px`, top: `${gifY - 40}px`, transform: 'translate(-50%, -50%)' }" />
+        <img v-if="showGif"
+            :src="gifSrc" class="pointer-events-none absolute w-30 h-30"
+            :style="{ left: `${gifX + 90}px`, top: `${gifY + 60}px`, transform: 'translate(-50%, -50%)' }" />
     </div>
 </template>
