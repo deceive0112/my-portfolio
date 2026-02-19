@@ -50,6 +50,10 @@ const isHovered = ref(false)
     </div>
   </div>
 
+  <div class="flex flex-row">
+    <UIcon name="material-symbols:star-outline" class="size-10"/>
+    <h1 class="text-2xl font-bold p-2">Featured Projects</h1>
+  </div>
   <div class="grid grid-cols-3 gap-4 backdrop-blur-3xl rounded-xl">
     <div class="flex items-center text-center justify-center col-span-2 p-4">
       01
