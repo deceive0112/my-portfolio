@@ -14,8 +14,10 @@
     "@iconify-json/lucide": "^1.2.90",
     "@iconify-json/simple-icons": "^1.2.70",
     "@nuxt/ui": "^4.4.0",
+    "@types/three": "^0.183.0",
     "nuxt": "^4.3.1",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "three": "^0.183.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.1",

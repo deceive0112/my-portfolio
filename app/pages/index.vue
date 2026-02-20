@@ -19,22 +19,23 @@ const isHovered = ref(false)
     <div class="group inline-flex flex-row mt-1 gap-1.5">
       <UIcon name="svg-spinners:pulse" class="size-5 text-green-400" />
       <div class="flex flex-row cursor-pointer overflow-hidden h-6 relative w-35">
-        <div class="flex items-center absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
+        <div class="flex absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
           <h2 class="text-md whitespace-nowrap">Available for work</h2>
         </div>
-        <div class="flex items-center absolute px-2 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+        <div class="flex absolute px-2 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
           <UIcon name="material-symbols:stacked-email-outline" class="size-5" />
-          <h2 class="text-md whitespace-nowrap">Contact me!</h2>
+          <h2 class="text-md whitespace-nowrap px-2">Contact me!</h2>
         </div>
       </div>
       <div class="flex gap-3">
         <span>|</span>
-        <h2 class="text-md">Based in Cagayan de Oro, Philippines.</h2> 
+        <h2 class="text-md">Based in Cagayan de Oro City, Philippines.</h2> 
       </div>
     </div>
 
       <p class="text-xl mt-5 backdrop-blur-lg rounded-xl">
-        I'm a developer who takes great care in crafting detailed, intuitive UI designs and engaging user experiences. Beyond software, I also bring hands-on experience in hardware projects, including IoT.
+        I'm a developer who takes great care in crafting detailed, intuitive UI designs and engaging user experiences. 
+        Beyond software, I also bring hands-on experience in hardware projects, such as IoT.
       </p>
 
     <div class="flex flex-row mt-5 mb-25 gap-3 backdrop-blur-lg rounded-xl">
@@ -78,21 +79,27 @@ const isHovered = ref(false)
   </div>
 
   <div class="inline-flex flex-row items-center mt-10">
-    <UIcon name="material-symbols:star-outline" class="size-10"/>
+    <UIcon name="material-symbols:star-outline" class="size-7"/>
     <h1 class="text-2xl font-bold p-2 gap-9">Featured Projects</h1>
     <span class="ml-auto">
       <a class="text-blue-400 cursor-pointer hover:underline">View all -></a>
     </span>
   </div>
-  <div class="grid grid-cols-3 gap-4 backdrop-blur-3xl rounded-xl mb-25">
-    <div class="flex items-center text-center justify-center col-span-2 p-4 mb-60">
-      01
+
+  <div class="grid grid-cols-5 gap-x-7 gap-y-7 backdrop-blur-2xl rounded-xl">
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">01</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
+      02
     </div>
-    <div class="p-4 mb-60">02</div>
-    <div class="p-4 mb-60">03</div>
-    <div class="p-4 mb-60">05</div>
-    <div class="p-4 mb-60">06</div>
-    <div class="flex items-center text-center justify-center col-span-2 p-4 mb-60">07</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">03</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">04</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">05</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-3 p-4 basis-sm rounded-xl text-3xl">06</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-4 basis-sm rounded-xl text-3xl">07</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-4 basis-sm rounded-xl text-3xl">
+      08
+    </div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-3 p-4 basis-sm rounded-xl text-3xl">09</div>
   </div>
 </div>
 </template>
