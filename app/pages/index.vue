@@ -108,10 +108,19 @@ const isHovered = ref(false)
       <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
         If you're interested in working together or just want to connect, feel free to reach out!</p>
         <form action="https://formsubmit.co/mikegeneral21@gmail.com" method="POST">
-          <input type="name" placeholder="Jhon Doe" class="p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input type="email" placeholder="Your email" class="p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <textarea placeholder="Your message" class="w-full p-2 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          <button type="submit" class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">Send Message</button>
+          <div class="flex flex-row gap-2">
+            <input type="text" name="name" placeholder="John Doe" 
+            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+            <input type="text" name="email" placeholder="Your email" 
+            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          </div>
+          <textarea placeholder="Your message" 
+            class="w-full p-2 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+          </textarea>
+          <button type="submit" 
+            class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">
+            Send Message
+          </button>
         </form>
     </div>
     <div class="bg-sky-500 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">Test2</div>
