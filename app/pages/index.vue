@@ -7,7 +7,7 @@ const isHovered = ref(false)
 </script>
 
 <template>
-<div class="flex flex-col min-h-screen px-10 md:px-20">
+<div id="home" class="flex flex-col min-h-screen px-10 md:px-20">
   <div class="flex flex-row gap-5">
     <div class="basis-3/5">
       <h1 class="text-4xl mt-20 font-bold backdrop-blur-lg rounded-xl">Hey! I'm 
@@ -22,10 +22,12 @@ const isHovered = ref(false)
         <div class="flex absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
           <span class="text-md whitespace-nowrap">Available for work</span>
         </div>
+        <a href="#form">
         <div class="flex absolute px-2 group-hover:text-blue-500 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
           <UIcon name="material-symbols:stacked-email-outline" class="size-5" />
           <span class="text-md whitespace-nowrap px-2">Contact me!</span>
         </div>
+        </a>
       </div>
       <div class="flex gap-3">
         <span>|</span>
@@ -102,21 +104,23 @@ const isHovered = ref(false)
     <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">07</div>
   </div>
 
-  <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
+  <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30" id="form">
     <div class="group flex-col p-4 basis-sm rounded-xl text-3xl backdrop-blur-2xl">
       <h3 class="text-2xl font-bold">Let's Work Together</h3>
       <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
         If you're interested in working together or just want to connect, feel free to reach out!</p>
         <form action="https://formsubmit.co/mikegeneral21@gmail.com" method="POST">
           <div class="flex flex-row gap-2">
-            <input type="text" name="name" placeholder="John Doe" 
+            <input type="name" name="name" placeholder="Your name" 
             class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
-            <input type="text" name="email" placeholder="Your email" 
+            <input type="email" name="email" placeholder="Your email" 
             class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
           </div>
-          <textarea placeholder="Your message" 
-            class="w-full p-2 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
-          </textarea>
+          <div>
+            <textarea type="message" name="message" placeholder="Your message" 
+            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </textarea>
+          </div>
           <button type="submit" 
             class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">
             Send Message
