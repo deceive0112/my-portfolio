@@ -22,7 +22,7 @@ const isHovered = ref(false)
         <div class="flex absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
           <h2 class="text-md whitespace-nowrap">Available for work</h2>
         </div>
-        <div class="flex absolute px-2 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+        <div class="flex absolute px-2 group-hover:text-blue-500 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
           <UIcon name="material-symbols:stacked-email-outline" class="size-5" />
           <h2 class="text-md whitespace-nowrap px-2">Contact me!</h2>
         </div>
@@ -40,13 +40,17 @@ const isHovered = ref(false)
 
     <div class="flex flex-row mt-5 mb-25 gap-3 backdrop-blur-lg rounded-xl">
       <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-        <UIcon name="mdi:github" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
-        <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">Github</span>
+        <a href="https://github.com/deceive0112" class="inline-flex">
+          <UIcon name="mdi:github" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
+          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">Github</span>
+        </a>
       </div>
         <span class="text-lg font-mono">|</span>
       <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-        <UIcon name="mdi:linkedin" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
-        <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/mike-general-256a63332/" class="inline-flex">
+          <UIcon name="mdi:linkedin" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
+          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">LinkedIn</span>
+        </a>
       </div>
         <span class="text-lg font-mono">|</span>
         <span class="text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">More about me... -></span>

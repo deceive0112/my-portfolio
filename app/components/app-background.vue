@@ -20,10 +20,9 @@ const animate = () => {
   gifX.value = lerp(gifX.value, x.value, 0.03)
   gifY.value = lerp(gifY.value, y.value, 0.03)
 
-  // ADDED: slowly rotate stars
   if (stars) {
-    stars.rotation.x += 0.0001
-    stars.rotation.y += 0.0001
+    stars.rotation.x += 0.0003
+    stars.rotation.y += 0.0003
   }
 
   if (renderer) {
@@ -38,7 +37,6 @@ const handleMouse = (event) => {
   y.value = event.clientY
 }
 
-// ADDED: Three.js setup
 let scene, camera
 
 const initThree = () => {
@@ -48,16 +46,14 @@ const initThree = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setPixelRatio(window.devicePixelRatio)
 
-  // Create stars
   const geometry = new THREE.BufferGeometry()
-  const count = 5000
+  const count = 600
   const positions = new Float32Array(count * 3)
   for (let i = 0; i < count * 3; i++) {
     positions[i] = (Math.random() - 0.5) * 1000
   }
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
-  // ADDED: star color based on color mode
   material = new THREE.PointsMaterial({
     color: colorMode.value === 'dark' ? 0xffffff : 0x1e293b,
     size: 0.7,
@@ -67,7 +63,6 @@ const initThree = () => {
   scene.add(stars)
   camera.position.z = 5
 
-  // Handle resize
   window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
@@ -75,7 +70,6 @@ const initThree = () => {
   })
 }
 
-// ADDED: watch color mode change and update star color
 watch(() => colorMode.value, (val) => {
   if (material) {
     material.color.set(val === 'dark' ? 0xffffff : 0x1e293b)
@@ -99,11 +93,9 @@ onUnmounted(() => {
   <div class="fixed inset-0 -z-10 overflow-hidden transition-colors duration-500"
     :class="colorMode.value === 'dark' ? 'bg-[#0f172a]' : 'bg-[#f8fafc]'">
 
-    <!-- ADDED: Three.js canvas for 3D stars -->
     <canvas ref="canvas" class="absolute inset-0 w-full h-full" />
 
-    <!-- existing gif -->
-    <img v-if="showGif"
+    <img v-if="!showGif"
       :src="gifSrc" class="pointer-events-none absolute w-30 h-30"
       :style="{ left: `${gifX + 90}px`, top: `${gifY + 60}px`, transform: 'translate(-50%, -50%)' }" />
 

@@ -13,12 +13,11 @@ const showGif = useState('showGif', () => true)
             <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer">Projects</span>
             <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer">Tech Stack</span>
             <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer">Blog</span>
-            <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer">Contact</span>
             <span class="flex flex-row gap-2">
                 <UColorModeButton class="hover:text-blue-500 duration-200 cursor-pointer"/>
                 <UButton
                     class="hover:text-blue-500 duration-200 cursor-pointer"
-                    :icon="showGif ? 'i-heroicons-eye' : 'i-heroicons-eye-slash'" color="gray" variant="ghost"
+                    :icon="!showGif ? 'i-heroicons-eye' : 'i-heroicons-eye-slash'" color="gray" variant="ghost"
                     @click="showGif = !showGif" />
             </span>
         </nav>
