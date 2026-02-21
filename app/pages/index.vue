@@ -16,21 +16,27 @@ definePageMeta({
   0% {
     transform: rotate(0deg);
   }
+
   15% {
     transform: rotate(18deg);
   }
+
   30% {
     transform: rotate(-12deg);
   }
+
   45% {
     transform: rotate(18deg);
   }
+
   60% {
     transform: rotate(-8deg);
   }
+
   75% {
     transform: rotate(14deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -39,7 +45,7 @@ definePageMeta({
 
 <template>
   <div class="flex flex-col min-h-screen px-10 md:px-20">
-    <!-- Portfolio Overview   -->
+    <!-- Portfolio Overview -->
     <div class="flex flex-row gap-5">
       <div class="basis-3/5">
         <h1 class="text-4xl mt-20 font-bold backdrop-blur-lg rounded-xl w-117 p-2">Hey! <span class="px-1">I'm</span>
@@ -78,14 +84,13 @@ definePageMeta({
             designs</span>
           and engaging <span
             class="text-cyan-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">user
-            experiences</span> .
+            experiences</span>.
           Beyond <span
             class="text-violet-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">software</span>,
           I also bring hands-on experience in <span
             class="text-emerald-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">hardware</span>
           projects, such as <span
-            class="text-yellow-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">IoT</span>
-          .
+            class="text-yellow-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">IoT</span>.
         </p>
 
         <div class="flex flex-row mt-5 mb-25 gap-3 backdrop-blur-lg rounded-xl w-121 p-2">
@@ -111,8 +116,8 @@ definePageMeta({
             class="text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">More
             about me... -></span>
         </div>
-
       </div>
+
       <div class="flex basis-1/5 items-center justify-center mt-20">
         <div class="backdrop-blur-lg rounded-xl p-3 mb-25 shadow-xl">
           <img src="/gradpicprof2.jpg" class="flex center w-50 h-50 rounded-lg shadow-lg" />
@@ -130,20 +135,12 @@ definePageMeta({
       </div>
     </div>
 
-    <!-- Tech Stack Overview and Educational Background  -->
+    <!-- Tech Stack Overview and Educational Background -->
     <div class="grid grid-cols-5 gap-x-9 gap-y-9 mt-15 mb-15">
-      <div class="col-span-3">
-        <h2 class="flex text-3xl font-bold items-center text-center justify-center mb-1">Tech Stack & Tools</h2>
-        <div class="group p-4 basis-sm rounded-xl text-3xl shadow-xl group relative bg-blue-900/60 backdrop-blur-sm border border-blue-800/50 
-        hover:border-blue-700/50 transition-all duration-300 hover:shadow-xl cursor-pointer h-91">
-          <PhysicsIcons />
-        </div>
-      </div>
-
+      <TechStack />
       <div class="col-span-2">
         <h2 class="flex text-3xl font-bold items-center text-center justify-center mb-1">Educational Background</h2>
         <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl">
-
           <div class="flex items-start gap-3">
             <a href="https://www.ustp.edu.ph/" target="_blank">
               <img src="/school/USTP.png"
@@ -187,19 +184,17 @@ definePageMeta({
 
           <div class="ml-auto">
             <a href="/school/General-Mike_CV.pdf" target="_blank">
-            <UButton 
-              icon="material-symbols:download-rounded"
-              class="mt-3 cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
-              View Full Resume
-            </UButton>
+              <UButton icon="material-symbols:download-rounded"
+                class="mt-3 cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
+                View Full Resume
+              </UButton>
             </a>
           </div>
-
         </div>
       </div>
     </div>
 
-    <!-- Featured Projects   -->
+    <!-- Featured Projects -->
     <div class="inline-flex flex-row items-center mt-10 shadow-xl rounded-xl">
       <UIcon name="material-symbols:star-outline" class="size-7" />
       <h2 class="text-2xl font-bold p-2 gap-9">Featured Projects</h2>
@@ -212,8 +207,7 @@ definePageMeta({
       <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
         01</div>
       <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        02
-      </div>
+        02</div>
       <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
         03</div>
       <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
@@ -226,15 +220,15 @@ definePageMeta({
         07</div>
     </div>
 
-    <!-- HTML to CSS to JS Showcase  -->
+    <!-- HTML to CSS to JS Showcase -->
     <div class="flex items-center text-center justify-center text-3xl bg-sky-400 rounded-xl p-2 mt-20">
       Test2
     </div>
 
-    <!-- Form & Randoms   -->
+    <!-- Form & Randoms -->
     <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
       <ContactForm />
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
+      <div class="bg-sky-500 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
         Test3</div>
     </div>
   </div>
