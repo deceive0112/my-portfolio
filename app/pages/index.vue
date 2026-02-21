@@ -8,6 +8,7 @@ const isHovered = ref(false)
 
 <template>
 <div class="flex flex-col min-h-screen px-10 md:px-20">
+  <!-- Portfolio Overview   -->
   <div class="flex flex-row gap-5">
     <div class="basis-3/5">
       <h1 class="text-4xl mt-20 font-bold backdrop-blur-lg rounded-xl">Hey! I'm 
@@ -60,7 +61,7 @@ const isHovered = ref(false)
 
     </div>
     <div class="flex basis-1/5 items-center justify-center mt-20">
-      <div class="backdrop-blur-lg rounded-xl p-3 mb-25">
+      <div class="backdrop-blur-lg rounded-xl p-3 mb-25 shadow-xl">
       <img src="/gradpicprof2.jpg" class="flex center w-50 h-50 rounded-lg shadow-lg" />
       </div>
     </div>
@@ -73,18 +74,19 @@ const isHovered = ref(false)
         leave-from-class="opacity-100 translate-x-0"
         leave-to-class="opacity-0 -translate-x-10"
       >
-      <div v-show="isHovered" class="backdrop-blur-lg rounded-xl p-3 mb-25">
+      <div v-show="isHovered" class="backdrop-blur-lg rounded-xl p-3 mb-25 shadow-xl">
         <img src="/gradpic-prof.jpg" class="flex center w-50 h-50 rounded-lg shadow-lg" />
       </div>
       </Transition>
     </div>
   </div>
 
-  <div>
-
+<!-- Tech Stack Overview   -->
+  <div> 
   </div>
 
-  <div class="inline-flex flex-row items-center mt-10">
+<!-- Featured Projects   -->
+  <div class="inline-flex flex-row items-center mt-10 shadow-xl rounded-xl">
     <UIcon name="material-symbols:star-outline" class="size-7"/>
     <h2 class="text-2xl font-bold p-2 gap-9">Featured Projects</h2>
     <span class="ml-auto">
@@ -104,25 +106,42 @@ const isHovered = ref(false)
     <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">07</div>
   </div>
 
-  <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30" id="form">
-    <div class="group flex-col p-4 basis-sm rounded-xl text-3xl backdrop-blur-2xl">
+<!-- Randoms   -->
+  <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
+    <!-- Form   -->
+    <div class="group flex-col p-4 basis-sm rounded-xl text-3xl backdrop-blur-2xl shadow-xl" id="form">
       <h3 class="text-2xl font-bold">Let's Work Together</h3>
       <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
         If you're interested in working together or just want to connect, feel free to reach out!</p>
         <form action="https://formsubmit.co/mikegeneral21@gmail.com" method="POST">
-          <div class="flex flex-row gap-2">
-            <input type="name" name="name" placeholder="Your name" 
-            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
-            <input type="email" name="email" placeholder="Your email" 
-            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <div class="flex flex-row gap-10 text-[1rem] mt-6">
+            <div class="flex flex-col w-full">
+              <span class="text-[1rem] mb-1">Name<span class="text-red-500">*</span></span>
+              <input type="text" name="name" placeholder="John Doe" 
+              class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+            </div>
+            <div class="flex flex-col w-full">
+              <span class="text-[1rem] mb-1">Email<span class="text-red-500">*</span></span>
+              <input type="email" name="email" placeholder="johndoe@example.com" 
+              class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
+            </div>
           </div>
-          <div>
-            <textarea type="message" name="message" placeholder="Your message" 
-            class="w-full p-1 mt-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
-            </textarea>
+
+          <div class="flex flex-col text-[1rem] mt-5">
+            <span class="text-[1rem] mb-1">Subject<span class="text-red-500">*</span></span>
+            <textarea name="subject" placeholder="Project Inquiry, collaboration, etc."
+            class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"></textarea>
           </div>
+
+          <div class="flex flex-col text-[1rem] mt-5">
+            <span class="text-[1rem] mb-1">Message<span class="text-red-500">*</span></span>
+            <textarea name="message" placeholder="Tell me about your project, timeline, and requirements..." rows="6"
+            class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"></textarea>
+          </div>
+          
           <button type="submit" 
-            class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">
+            class="group flex items-center justify-center mt-6 px-4 py-2 text-[1.2rem] bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">
+            <UIcon name="prime:send" class="size-5 inline-flex mr-1" />
             Send Message
           </button>
         </form>
