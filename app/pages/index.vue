@@ -142,14 +142,14 @@ const isHovered = ref(false)
   </div>
 
 <!-- HTML to CSS to JS Showcase  --> 
-  <div class="bg-sky-400 flex items-center text-center justify-center p-4 basis-sm rounded-xl text-3xl gap-x-3 gap-y-3">
-      Test2
+  <div class="flex items-center text-center justify-center text-3xl bg-sky-400 rounded-xl p-2 mt-20">
+    Test2
   </div>
 
 <!-- Form & Randoms   -->
   <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
     <ContactForm />
-    <div class="bg-sky-500 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">Test3</div>
+    <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">Test3</div>
   </div>
 </div>
 </template>
