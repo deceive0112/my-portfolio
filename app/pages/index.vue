@@ -6,6 +6,23 @@ const isHovered = ref(false)
   });
 </script>
 
+<style>
+.animate-wave {
+  animation: wave 1.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(14deg); }
+  30%  { transform: rotate(-8deg); }
+  45%  { transform: rotate(14deg); }
+  60%  { transform: rotate(-4deg); }
+  75%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+
 <template>
 <div class="flex flex-col min-h-screen px-10 md:px-20">
   <!-- Portfolio Overview   -->
@@ -15,11 +32,14 @@ const isHovered = ref(false)
         <a class="text-blue-500 cursor-pointer"  
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false">{{ title }}</a>
+        <span class="px-3 inline-block animate-wave cursor-pointer">
+          <UIcon name="twemoji:waving-hand-light-skin-tone" class="size-7" />
+        </span>
       </h1>
 
-    <div class="group inline-flex flex-row mt-1 gap-1.5">
+    <div class="inline-flex flex-row mt-1 gap-1.5">
       <UIcon name="svg-spinners:pulse" class="size-5 text-green-400" />
-      <div class="flex flex-row cursor-pointer overflow-hidden h-6 relative w-35">
+      <div class="group flex flex-row cursor-pointer overflow-hidden h-6 relative w-35">
         <div class="flex absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
           <span class="text-md whitespace-nowrap">Available for work</span>
         </div>
@@ -117,30 +137,30 @@ const isHovered = ref(false)
           <div class="flex flex-row gap-10 text-[1rem] mt-6">
             <div class="flex flex-col w-full">
               <span class="text-[1rem] mb-1">Name<span class="text-red-500">*</span></span>
-              <input type="text" name="name" placeholder="John Doe" 
+              <input type="text" maxlength="60" name="name" placeholder="John Doe" 
               class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
             </div>
             <div class="flex flex-col w-full">
               <span class="text-[1rem] mb-1">Email<span class="text-red-500">*</span></span>
-              <input type="email" name="email" placeholder="johndoe@example.com" 
+              <input type="email" maxlength="120"name="email" placeholder="johndoe@example.com" 
               class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" />
             </div>
           </div>
 
           <div class="flex flex-col text-[1rem] mt-5">
             <span class="text-[1rem] mb-1">Subject<span class="text-red-500">*</span></span>
-            <textarea name="subject" placeholder="Project Inquiry, collaboration, etc."
-            class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"></textarea>
+            <textarea name="subject" maxlength="160" placeholder="Project Inquiry, collaboration, etc."
+            class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" rows="1"></textarea>
           </div>
 
           <div class="flex flex-col text-[1rem] mt-5">
             <span class="text-[1rem] mb-1">Message<span class="text-red-500">*</span></span>
-            <textarea name="message" placeholder="Tell me about your project, timeline, and requirements..." rows="6"
+            <textarea name="message" maxlength="600" placeholder="Tell me about your project, timeline, and requirements..." rows="6"
             class="w-full px-3 py-2 rounded-md border-0 ring-1 ring-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"></textarea>
           </div>
-          
+
           <button type="submit" 
-            class="group flex items-center justify-center mt-6 px-4 py-2 text-[1.2rem] bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">
+            class="group flex items-center justify-center mt-6 px-4 py-2 text-[1.2rem] bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200 cursor-pointer">
             <UIcon name="prime:send" class="size-5 inline-flex mr-1" />
             Send Message
           </button>
