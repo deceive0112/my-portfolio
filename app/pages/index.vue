@@ -28,8 +28,8 @@ const isHovered = ref(false)
   <!-- Portfolio Overview   -->
   <div class="flex flex-row gap-5">
     <div class="basis-3/5">
-      <h1 class="text-4xl mt-20 font-bold backdrop-blur-lg rounded-xl">Hey! I'm 
-        <a class="text-blue-500 cursor-pointer"  
+      <h1 class="text-4xl mt-20 font-bold backdrop-blur-lg rounded-xl">Hey! <span class="px-1">I'm</span>
+        <a class="text-blue-500 cursor-pointer px-1.5"  
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false">{{ title }}</a>
         <span class="px-3 inline-block animate-wave cursor-pointer">
@@ -67,16 +67,16 @@ const isHovered = ref(false)
 
     <div class="flex flex-row mt-5 mb-25 gap-3 backdrop-blur-lg rounded-xl">
       <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-        <a href="https://github.com/deceive0112" class="inline-flex">
+        <a href="https://github.com/deceive0112" target="_blank" class="inline-flex">
           <UIcon name="mdi:github" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
-          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">Github</span>
+          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
         </a>
       </div>
         <span class="text-lg font-mono">|</span>
       <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-        <a href="https://www.linkedin.com/in/mike-general-256a63332/" class="inline-flex">
+        <a href="https://www.linkedin.com/in/mike-general-256a63332/" target="_blank" class="inline-flex">
           <UIcon name="mdi:linkedin" class="size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200"/>
-          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200">LinkedIn</span>
+          <span class="text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
         </a>
       </div>
         <span class="text-lg font-mono">|</span>
@@ -105,8 +105,19 @@ const isHovered = ref(false)
     </div>
   </div>
 
-<!-- Tech Stack Overview   -->
-  <div> 
+<!-- Tech Stack Overview and Educational Background  -->
+  <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-15 mb-15">
+    <div>
+      <h2 class="flex text-2xl font-bold items-center text-center">Tech Stack & Tools</h2>
+      <div class="group flex-col p-4 basis-sm rounded-xl text-3xl backdrop-blur-2xl shadow-xl" id="form">
+        <h3 class="text-2xl font-bold">Let's Work Together</h3>
+        <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
+          If you're interested in working together or just want to connect, feel free to reach out!</p>
+      </div>
+    </div>
+    <div class="bg-sky-500 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
+      Test1
+    </div>
   </div>
 
 <!-- Featured Projects   -->
@@ -130,6 +141,11 @@ const isHovered = ref(false)
     <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">07</div>
   </div>
 
+<!-- HTML to CSS to JS Showcase  --> 
+  <div class="bg-sky-400 flex items-center text-center justify-center p-4 basis-sm rounded-xl text-3xl gap-x-9 gap-y-9">
+      Test2
+  </div>
+
 <!-- Randoms   -->
   <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
     <!-- Form   -->
@@ -137,7 +153,7 @@ const isHovered = ref(false)
       <h3 class="text-2xl font-bold">Let's Work Together</h3>
       <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
         If you're interested in working together or just want to connect, feel free to reach out!</p>
-        <form action="https://formsubmit.co/mikegeneral21@gmail.com" method="POST">
+        <form action="https://formsubmit.co/ajax/75a004e93226627edec82f72fb9af88e" method="POST">
           <div class="flex flex-row gap-10 text-[1rem] mt-6">
             <div class="flex flex-col w-full">
               <span class="text-[1rem] mb-1">Name<span class="text-red-500">*</span></span>
