@@ -68,7 +68,7 @@ const submitForm = async () => {
     </div>
   </Transition>
 
-  <div class="flex-col p-4 rounded-xl backdrop-blur-2xl shadow-xl" id="form">
+  <div class="flex-col p-4 rounded-xl backdrop-blur-3xl shadow-xl" id="form">
     <h3 class="text-2xl font-bold">Let's Work Together</h3>
     <p class="mt-3 text-lg">I'm currently open to new opportunities and collaborations. 
       If you're interested in working together or just want to connect, feel free to reach out!</p>

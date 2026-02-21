@@ -47,7 +47,7 @@ const initThree = () => {
   renderer.setPixelRatio(window.devicePixelRatio)
 
   const geometry = new THREE.BufferGeometry()
-  const count = 600
+  const count = 900
   const positions = new Float32Array(count * 3)
   for (let i = 0; i < count * 3; i++) {
     positions[i] = (Math.random() - 0.5) * 1000

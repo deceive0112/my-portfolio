@@ -16,27 +16,21 @@ definePageMeta({
   0% {
     transform: rotate(0deg);
   }
-
   15% {
     transform: rotate(18deg);
   }
-
   30% {
     transform: rotate(-12deg);
   }
-
   45% {
     transform: rotate(18deg);
   }
-
   60% {
     transform: rotate(-8deg);
   }
-
   75% {
     transform: rotate(14deg);
   }
-
   100% {
     transform: rotate(0deg);
   }
@@ -140,8 +134,9 @@ definePageMeta({
     <div class="grid grid-cols-5 gap-x-9 gap-y-9 mt-15 mb-15">
       <div class="col-span-3">
         <h2 class="flex text-3xl font-bold items-center text-center justify-center mb-1">Tech Stack & Tools</h2>
-        <div class="group p-4 basis-sm rounded-xl text-3xl backdrop-blur-2xl shadow-xl">
-          <p class="text-lg">the quick brown fox jumps over the lazy dog</p>
+        <div class="group p-4 basis-sm rounded-xl text-3xl shadow-xl group relative bg-blue-900/60 backdrop-blur-sm border border-blue-800/50 
+        hover:border-blue-700/50 transition-all duration-300 hover:shadow-xl cursor-pointer h-91">
+          <PhysicsIcons />
         </div>
       </div>
 
@@ -194,7 +189,7 @@ definePageMeta({
             <a href="/school/General-Mike_CV.pdf" target="_blank">
             <UButton 
               icon="material-symbols:download-rounded"
-              class="mt-3 cursor-pointer bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
+              class="mt-3 cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
               View Full Resume
             </UButton>
             </a>
