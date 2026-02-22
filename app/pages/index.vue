@@ -160,7 +160,17 @@ definePageMeta({
           <div class="bg-white/50 rounded-lg overflow-hidden">
             <iframe src="/projects/to-do-list/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
-          <p class="text-md font-semibold uppercase tracking-widest text-orange-400">HTML</p>
+          <div class="flex items-center justify-between">
+            <p class="text-md font-semibold uppercase tracking-widest text-orange-400">HTML</p>
+            <div class="flex justify-end">
+              <a href="https://github.com/deceive0112/general-mike/blob/main/public/projects/to-do-list/index.html" target="_blank">
+              <UButton icon="vscode-icons:folder-type-github-opened"
+                class="rounded-lg shadow-md cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
+                Open Source Code
+              </UButton>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- CSS -->
@@ -184,7 +194,7 @@ definePageMeta({
       </div>
     </div>
 
-    <!-- Form & Randoms -->
+    <!-- Form & Random Mini Games -->
     <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
       <ContactForm />
       <div
