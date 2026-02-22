@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const title = "General, Mike";
 const isHovered = ref(false)
+const isHoveredEdu = ref(false)
 
 definePageMeta({
   layout: "default",
@@ -136,12 +137,21 @@ definePageMeta({
       </div>
     </div>
 
-    <!-- Tech Stack Overview and Educational Background -->
+    <!-- Featured Project and Educational Background -->
     <div class="grid grid-cols-5 gap-x-9 gap-y-9 mt-15 mb-15">
-      <TechStack />
+      <div class="col-span-3">
+        <h2 class="flex text-3xl uppercase font-bold items-center text-center justify-center mb-1">Featured Project</h2>
+        <div class="p-3 rounded-xl backdrop-blur-sm shadow-2xl">
+          <p class="flex text-3xl font-bold items-center text-center justify-center">Test</p>
+        </div>
+      </div>
+
       <div class="col-span-2">
-        <h2 class="flex text-3xl font-bold items-center text-center justify-center mb-1">Educational Background</h2>
-        <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl">
+        <h2 class="flex text-3xl uppercase font-bold items-center text-center justify-center mb-1">Educational
+          Background</h2>
+        <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl group"
+          @mouseenter="isHoveredEdu = true" @mouseleave="isHoveredEdu = false">
+
           <div class="flex items-start gap-3">
             <a href="https://www.ustp.edu.ph/" target="_blank">
               <img src="/school/USTP.png"
@@ -163,26 +173,30 @@ definePageMeta({
             </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <a href="https://www.liceo.edu.ph/" target="_blank">
-              <img src="/school/LDCU.png"
-                class="w-20 h-20 min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer" />
-            </a>
-            <div class="w-full">
-              <p class="font-bold text-[13px] mt-2">Liceo de Cagayan University (LDCU)</p>
-              <div class="flex items-center">
-                <p class="text-[13px] text-gray-400 mt-1">Science, Technology, Engineering, and Mathematics</p>
-                <p class="text-[13px] text-gray-400 mt-1 ml-auto">2018 - 2020</p>
+          <Transition enter-active-class="transition-all duration-500" enter-from-class="opacity-0 -translate-y-3"
+            enter-to-class="opacity-100 translate-y-0" leave-active-class="transition-all duration-300"
+            leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-3">
+            <div v-show="isHoveredEdu" class="flex items-start gap-3">
+              <a href="https://www.liceo.edu.ph/" target="_blank">
+                <img src="/school/LDCU.png"
+                  class="w-20 h-20 min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer" />
+              </a>
+              <div class="w-full">
+                <p class="font-bold text-[13px] mt-2">Liceo de Cagayan University (LDCU)</p>
+                <div class="flex items-center">
+                  <p class="text-[13px] text-gray-400 mt-1">Science, Technology, Engineering, and Mathematics</p>
+                  <p class="text-[13px] text-gray-400 mt-1 ml-auto">2018 - 2020</p>
+                </div>
+                <p class="text-[13px] text-gray-400">(STEM)</p>
+                <p class="text-[12px] mt-1">Research:</p>
+                <ul class="list-disc ml-3 px-1">
+                  <li class="text-[12px] mt-0.5">Designer of the building model's structure.</li>
+                  <li class="text-[12px] mt-0.5">Research about the importance of implementing of buoyancy and bearing
+                    systems on buildings.</li>
+                </ul>
               </div>
-              <p class="text-[13px] text-gray-400">(STEM)</p>
-              <p class="text-[12px] mt-1">Research:</p>
-              <ul class="list-disc ml-3 px-1">
-                <li class="text-[12px] mt-0.5">Designer of the building model's structure.</li>
-                <li class="text-[12px] mt-0.5">Research about the importance of implementing of buoyancy and bearing
-                  systems on buildings.</li>
-              </ul>
             </div>
-          </div>
+          </Transition>
 
           <div class="ml-auto">
             <a href="/school/General-Mike_CV.pdf" target="_blank">
@@ -196,27 +210,8 @@ definePageMeta({
       </div>
     </div>
 
-    <!-- Featured Projects -->
-    <div class="inline-flex flex-row items-center mt-10 shadow-xl rounded-xl">
-      <UIcon name="material-symbols:star-outline" class="size-7" />
-      <h2 class="text-2xl font-bold p-2 gap-9">Featured Projects</h2>
-      <span class="ml-auto">
-        <a class="hover:text-blue-500 cursor-pointer hover:underline">View all -></a>
-      </span>
-    </div>
-
-    <div class="grid grid-cols-3 gap-x-7 gap-y-7 backdrop-blur-2xl rounded-xl p-1.5">
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        01</div>
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        02</div>
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        03</div>
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        04</div>
-      <div class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-4 basis-sm rounded-xl text-3xl">
-        05</div>
-    </div>
+    <!-- Projects -->
+    <ProjectsOverview />
 
     <!-- HTML to CSS to JS Showcase -->
     <div class="flex backdrop-blur-2xl rounded-xl items-center text-center justify-center text-3xl p-5 mt-15">
@@ -256,13 +251,17 @@ definePageMeta({
     <!-- Form & Randoms -->
     <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
       <ContactForm />
-      <div class="grid grid-cols-2 grid-rows-1 gap-x-9 gap-y-9 bg-sky-500 items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
-        <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
-        01</div>
-        <div class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
-        02</div>
-        <div class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-30 basis-sm rounded-xl text-3xl">
-        03</div>
+      <div
+        class="grid grid-cols-2 grid-rows-1 gap-x-9 gap-y-9 bg-sky-500 items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
+        <div
+          class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
+          01</div>
+        <div
+          class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
+          02</div>
+        <div
+          class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-30 basis-sm rounded-xl text-3xl">
+          03</div>
       </div>
     </div>
   </div>
