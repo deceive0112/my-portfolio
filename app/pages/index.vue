@@ -260,7 +260,7 @@ definePageMeta({
           class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
           02</div>
         <div
-          class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-30 basis-sm rounded-xl text-3xl">
+          class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-25 basis-sm rounded-xl text-3xl">
           03</div>
       </div>
     </div>
