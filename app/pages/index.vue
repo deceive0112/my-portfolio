@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const title = "General, Mike";
 const isHovered = ref(false)
+
 definePageMeta({
   layout: "default",
 });

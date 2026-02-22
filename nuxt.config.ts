@@ -1,15 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui'
-  ],
-
-    colorMode: {
+  colorMode: {
     preference: 'dark',   
     fallback: 'dark',     
     classSuffix: '',      
   },
+
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui'
+  ],
 
   devtools: {
     enabled: true

@@ -16,6 +16,10 @@ let renderer, stars, material
 
 const lerp = (start, end, speed) => start + (end - start) * speed
 
+const toggleTheme = () => {
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+}
+
 const animate = () => {
   gifX.value = lerp(gifX.value, x.value, 0.03)
   gifY.value = lerp(gifY.value, y.value, 0.03)
