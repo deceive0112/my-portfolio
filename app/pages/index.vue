@@ -161,7 +161,7 @@ definePageMeta({
             <iframe src="/projects/to-do-list/HTML/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-md font-semibold uppercase tracking-widest text-orange-400">HTML</p>
+            <p class="text-md font-semibold uppercase tracking-widest text-orange-400">&lt;!--HTML--&gt;</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -180,7 +180,7 @@ definePageMeta({
             <iframe src="/projects/to-do-list/HTML-CSS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-md font-semibold uppercase tracking-widest text-purple-400">CSS</p>
+            <p class="text-md font-semibold uppercase tracking-widest text-purple-400">/*CSS*/</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML-CSS.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -198,7 +198,7 @@ definePageMeta({
           <!-- inner grid -->
           <div class="bg-white/50 rounded-lg p-3">3</div>
           <!-- title below -->
-          <p class="text-md font-semibold uppercase tracking-widest text-blue-400">JavaScript</p>
+          <p class="text-md font-semibold uppercase tracking-widest text-blue-400">//JavaScript</p>
         </div>
 
       </div>
