@@ -8,6 +8,11 @@ fieldset {
   margin: 0 auto;
 }
 
+button:active {
+  background-color: darkgray;
+  transform: scale(0.95); 
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -54,8 +59,11 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 15px;
+  padding-bottom: 20px;
+  padding-top: 5px;
   font-weight: bold;
+  font-size: medium;
   margin: auto;
 }
 .time {
@@ -80,7 +88,7 @@ h4 {
 
 .bottom-phone:hover {
   opacity: 0.5;
-  color: gray;
+  color: rgb(161, 159, 159);
   cursor: pointer;
 }
 
@@ -90,6 +98,8 @@ h4 {
   width: 100%;
 }
 .task-row input {
+  border-radius: 5px;
+  margin-left: 3px;
   flex: 5;
 }
 .task-row button {
