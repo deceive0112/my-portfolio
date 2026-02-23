@@ -102,6 +102,7 @@ h4 {
 }
 
 footer {
+  font-size: smaller;
   display: flex;
   justify-content: center;
   text-align: center;
