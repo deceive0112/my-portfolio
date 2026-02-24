@@ -161,7 +161,7 @@ definePageMeta({
             <iframe src="/projects/to-do-list/HTML/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-md font-semibold uppercase tracking-widest text-orange-400">&lt;!--HTML--&gt;</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-orange-400">&lt;!--HTML--&gt;</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -180,7 +180,7 @@ definePageMeta({
             <iframe src="/projects/to-do-list/HTML-CSS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-md font-semibold uppercase tracking-widest text-purple-400">/*CSS*/</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-purple-400">/*CSS*/</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML-CSS.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -199,7 +199,7 @@ definePageMeta({
             <iframe src="/projects/to-do-list/HTML-CSS-JS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-md font-semibold uppercase tracking-widest text-blue-400">//Javascript</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-blue-400">//Javascript</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML-CSS-JS.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
