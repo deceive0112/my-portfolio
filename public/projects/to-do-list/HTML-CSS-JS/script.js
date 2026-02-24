@@ -47,6 +47,10 @@ function render() {
     };
 
     deleteTitleBtn.onclick = function () {
+      const confirmDelete = confirm("Are you sure want to delete this whole task?");
+
+      if (!confirmDelete) return;
+      
       notes.splice(noteIndex, 1);
       saveData();
       render();
