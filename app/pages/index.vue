@@ -182,7 +182,7 @@ definePageMeta({
       <div class="col-span-3">
         <h2 class="flex text-3xl uppercase font-bold items-center text-center justify-center mb-1">Featured Project</h2>
         <div class="p-3 rounded-xl backdrop-blur-sm shadow-2xl">
-          <p class="flex text-3xl font-bold items-center text-center justify-center">Test</p>
+          <p class="flex text-3xl font-bold items-center text-center justify-center">Work in Progress</p>
         </div>
       </div>
       <EducationalBackground />
@@ -198,7 +198,7 @@ definePageMeta({
         <!-- HTML -->
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-orange-500/50 hover:shadow-lg hover:bg-white/5">
-          <div class="bg-white/50 rounded-lg overflow-hidden">
+          <div class="bg-white/50 rounded-2xl overflow-hidden">
             <iframe src="/projects/to-do-list/HTML/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
@@ -217,7 +217,7 @@ definePageMeta({
         <!-- CSS -->
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-purple-500/50 hover:shadow-lg hover:bg-white/5">
-          <div class="bg-white/50 rounded-lg overflow-hidden">
+          <div class="bg-white/50 rounded-2xl overflow-hidden">
             <iframe src="/projects/to-do-list/HTML-CSS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
@@ -236,7 +236,7 @@ definePageMeta({
         <!-- JavaScript -->
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-blue-500/50 hover:shadow-lg hover:bg-white/5">
-          <div class="bg-white/50 rounded-lg overflow-hidden">
+          <div class="bg-white/50 rounded-2xl overflow-hidden">
             <iframe src="/projects/to-do-list/HTML-CSS-JS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
