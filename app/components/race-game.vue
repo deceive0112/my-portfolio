@@ -63,7 +63,7 @@ onUnmounted(() => clearInterval(interval))
 
         <span class="text-sm w-20 shrink-0 text-right">{{ duck.name }}</span>
 
-        <div class="flex-1 relative h-8 bg-white/5 rounded-full overflow-hidden border border-white/10">
+        <div class="flex-1 relative h-8 bg-white/5 rounded-full overflow-hidden border border-white/10 shadow-sm">
           <div class="absolute right-0 top-0 bottom-0 w-1 bg-gray-500 z-10" />
           <div class="absolute right-2 top-0 bottom-0 flex items-center">
             <span class="text-xs text-gray-400">🏁</span>
@@ -80,7 +80,8 @@ onUnmounted(() => clearInterval(interval))
 
     <div class="flex justify-center gap-4">
       <button @click="startRace" :disabled="raceStarted"
-        class="px-2 py-2 bg-blue-500 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-bold cursor-pointer transition-colors duration-200 border-2 uppercase text-sm shadow-m">
+        class="px-2 py-2 bg-blue-500 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-bold 
+        cursor-pointer transition-colors duration-200 border-2 uppercase text-sm shadow-m">
         Start Race
       </button>
       <button @click="resetRace"

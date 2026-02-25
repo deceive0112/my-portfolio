@@ -22,7 +22,6 @@ const wpm = computed(() => {
   return Math.round(score.value / elapsed)
 })
 
-// ADDED: check if input matches start of current word
 const isWrong = computed(() => {
   if (!typingInput.value) return false
   return !currentWord.value.startsWith(typingInput.value)
@@ -40,10 +39,8 @@ const startGame = () => {
 
   nextTick(() => inputRef.value?.focus())
 
-  // FIXED: clear previous timer before starting new one
   clearInterval(typingTimer)
   typingTimer = setInterval(() => {
-    // FIXED: stop at 0, never go negative
     if (timeLeft.value <= 0) {
       clearInterval(typingTimer)
       gameOver.value = true
@@ -66,9 +63,8 @@ onUnmounted(() => clearInterval(typingTimer))
 </script>
 
 <template>
-  <div class="p-2 rounded-xl flex flex-col items-center gap-2">
+  <div class="p-2 rounded-xl flex flex-col items-center gap-2 shadow-md">
 
-    <!-- Stats -->
     <div class="flex gap-6 text-sm">
       <div class="flex flex-col items-center">
         <span class="text-white">Score</span>
@@ -84,19 +80,16 @@ onUnmounted(() => clearInterval(typingTimer))
       </div>
     </div>
 
-    <!-- CHANGED: word turns red when input is wrong -->
-    <div class="text-xl font-mono font-bold tracking-widest p-2 rounded-xl bg-white/5 w-full text-center transition-colors duration-150"
+    <div class="text-xl font-mono font-bold tracking-widest p-2 rounded-xl bg-white/5 w-full text-center transition-colors duration-150 shadow-sm"
       :class="isWrong ? 'text-red-400' : ''">
       {{ gameStarted ? currentWord : '???' }}
     </div>
 
-    <!-- CHANGED: input border turns red when wrong -->
     <input ref="inputRef" v-model="typingInput" @input="checkInput"
       :disabled="!gameStarted" placeholder="Start typing..."
-      class="w-full px-2 py-2 rounded-xl bg-white/5 border focus:outline-none focus:ring-1 text-center font-mono text-[18px] disabled:opacity-50 transition-colors duration-150"
+      class="w-full px-2 py-2 rounded-xl bg-white/5 border focus:outline-none focus:ring-1 text-center font-mono text-[18px] disabled:opacity-50 transition-colors duration-150 shadow-sm"
       :class="isWrong ? 'border-red-500 focus:ring-red-500' : 'border-white/10 focus:ring-blue-500'" />
 
-    <!-- Game Over -->
     <Transition enter-active-class="transition-all duration-500"
       enter-from-class="opacity-0 translate-y-3"
       enter-to-class="opacity-100 translate-y-0">
@@ -109,7 +102,6 @@ onUnmounted(() => clearInterval(typingTimer))
       </div>
     </Transition>
 
-    <!-- Button -->
     <button @click="startGame"
       class="px-2 py-2 bg-blue-500 hover:bg-blue-600 rounded-xl font-bold uppercase text-sm cursor-pointer transition-colors duration-200 border-2 shadow-md">
       {{ gameOver || !gameStarted ? 'Start' : 'Restart' }}

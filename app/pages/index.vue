@@ -386,14 +386,14 @@ const onMouseMove = (e: MouseEvent) => {
       <div
         class="grid grid-cols-2 grid-rows-1 gap-x-9 gap-y-9 items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl backdrop-blur-xl">
         <div
-          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-3xl backdrop-blur-sm">
+          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-3xl backdrop-blur-sm shadow-sm">
           <TicTacToe />
         </div>
         <div
-          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-lg">
+          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-lg backdrop-blur-sm shadow-sm">
           <TypingGame /></div>
         <div
-          class="col-span-2 p-1 basis-sm rounded-xl text-lg backdrop-blur-sm">
+          class="col-span-2 p-1 basis-sm rounded-xl text-lg backdrop-blur-sm shadow-sm">
           <RaceGame /></div>
       </div>
     </div>
