@@ -366,16 +366,16 @@ const onMouseMove = (e) => {
     <div class="grid grid-cols-2 gap-x-9 gap-y-9 mt-30">
       <ContactForm />
       <div
-        class="grid grid-cols-2 grid-rows-1 gap-x-9 gap-y-9 bg-sky-500 items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl">
+        class="grid grid-cols-2 grid-rows-1 gap-x-9 gap-y-9 items-center text-center justify-center col-span-1 p-4 basis-sm rounded-xl text-3xl backdrop-blur-xl">
+        <div
+          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-3xl backdrop-blur-sm">
+          <TicTacToe/></div>
         <div
           class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
-          01</div>
-        <div
-          class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
-          02</div>
+          Test?</div>
         <div
           class="bg-sky-400 flex items-center text-center justify-center col-span-2 p-25 basis-sm rounded-xl text-3xl">
-          03</div>
+          Race</div>
       </div>
     </div>
   </div>
