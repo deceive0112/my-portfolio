@@ -5,6 +5,28 @@ const isHovered = ref(false)
 definePageMeta({
   layout: "default",
 });
+
+const iconScroll = ref(null)
+let isDown = false
+let startY = 0
+let scrollTop = 0
+
+const onMouseDown = (e) => {
+  isDown = true
+  startY = e.pageY - iconScroll.value.offsetTop
+  scrollTop = iconScroll.value.scrollTop
+}
+
+const onMouseLeave = () => { isDown = false }
+const onMouseUp = () => { isDown = false }
+
+const onMouseMove = (e) => {
+  if (!isDown) return
+  e.preventDefault()
+  const y = e.pageY - iconScroll.value.offsetTop
+  const walk = (y - startY) * 2
+  iconScroll.value.scrollTop = scrollTop - walk
+}
 </script>
 
 <style>
@@ -43,7 +65,9 @@ definePageMeta({
   }
 }
 
-.typing1, .typing2, .typing3 {
+.typing1,
+.typing2,
+.typing3 {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid currentColor;
@@ -53,36 +77,74 @@ definePageMeta({
 .typing1 {
   animation: typing1 5s steps(11) infinite, blink 0.6s step-end infinite;
 }
+
 .typing2 {
   animation: typing2 5s steps(7) infinite, blink 0.6s step-end infinite;
 }
+
 .typing3 {
   animation: typing3 5s steps(13) infinite, blink 0.6s step-end infinite;
 }
 
 @keyframes typing1 {
-  0%   { width: 0; }
-  50%  { width: 11ch; }
-  90%  { width: 11ch; }
-  100% { width: 0; }
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 11ch;
+  }
+
+  90% {
+    width: 11ch;
+  }
+
+  100% {
+    width: 0;
+  }
 }
+
 @keyframes typing2 {
-  0%   { width: 0; }
-  50%  { width: 7ch; }
-  90%  { width: 7ch; }
-  100% { width: 0; }
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 7ch;
+  }
+
+  90% {
+    width: 7ch;
+  }
+
+  100% {
+    width: 0;
+  }
 }
+
 @keyframes typing3 {
-  0%   { width: 0; }
-  50%  { width: 13ch; }
-  90%  { width: 13ch; }
-  100% { width: 0; }
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 13ch;
+  }
+
+  90% {
+    width: 13ch;
+  }
+
+  100% {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
-
 </style>
 
 <template>
@@ -178,11 +240,50 @@ definePageMeta({
     </div>
 
     <!-- Featured Project and Educational Background -->
-    <div class="grid grid-cols-5 gap-x-9 gap-y-9 mt-15 mb-15">
+    <div class="grid grid-cols-5 gap-x-15 gap-y-15 mt-15 mb-15">
       <div class="col-span-3">
         <h2 class="flex text-3xl uppercase font-bold items-center text-center justify-center mb-1">Featured Project</h2>
         <div class="p-3 rounded-xl backdrop-blur-sm shadow-2xl">
-          <p class="flex text-3xl font-bold items-center text-center justify-center">Work in Progress</p>
+          <div
+            class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
+            <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work in Progress</p>
+
+            <!-- CHANGED: wrapped in flex row -->
+            <div class="flex flex-row gap-3 items-start">
+
+              <!-- GitHub thumbnail -->
+              <a href="https://github.com/deceive0112/" target="_blank"
+                class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-103 transition-all duration-300 cursor-pointer border border-white/10 flex-1">
+                <img src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" />
+                <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+                  <UIcon name="mdi:github" class="size-4 text-gray-400" />
+                  <span class="text-xs text-gray-400">github.com</span>
+                  <span class="text-xs font-bold ml-1">deceive0112/</span>
+                </div>
+              </a>
+
+              <div ref="iconScroll"
+                class="flex flex-col gap-2 overflow-y-auto cursor-grab active:cursor-grabbing select-none self-stretch mt-1"
+                style="scrollbar-width: none;" @mousedown="onMouseDown" @mouseleave="onMouseLeave" @mouseup="onMouseUp"
+                @mousemove="onMouseMove">
+                <div class="flex flex-col items-center gap-1 shrink-0">
+                  <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-13 p-1" />
+                  <span class="text-[10px] text-gray-400">HTML</span>
+                </div>
+                <div class="flex flex-col items-center gap-1 shrink-0">
+                  <UIcon name="devicon:css" class="rounded-xl shadow-xl size-13 p-1" />
+                  <span class="text-[10px] text-gray-400">CSS</span>
+                </div>
+                <div class="flex flex-col items-center gap-1 shrink-0">
+                  <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-13 p-1" />
+                  <span class="text-[10px] text-gray-400">JavaScript</span>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="gap-2 p-3 rounded-xl">Test test</p>
+          </div>
         </div>
       </div>
       <EducationalBackground />
@@ -199,16 +300,18 @@ definePageMeta({
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-orange-500/50 hover:shadow-lg hover:bg-white/5">
           <div class="bg-white/50 rounded-2xl overflow-hidden">
-            <iframe src="/projects/to-do-list/HTML/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
+            <iframe src="/projects/to-do-list/HTML/index.html" class="w-full h-120 rounded-lg"
+              title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-[28px] font-semibold uppercase tracking-widest text-orange-400 inline-block typing1">&lt;!--HTML--&gt;</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-orange-400 inline-block typing1">
+              &lt;!--HTML--&gt;</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML.txt" target="_blank">
-              <UButton icon="material-symbols:folder-open-rounded"
-                class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
-                Open Source Code
-              </UButton>
+                <UButton icon="material-symbols:folder-open-rounded"
+                  class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
+                  Open Source Code
+                </UButton>
               </a>
             </div>
           </div>
@@ -218,16 +321,18 @@ definePageMeta({
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-purple-500/50 hover:shadow-lg hover:bg-white/5">
           <div class="bg-white/50 rounded-2xl overflow-hidden">
-            <iframe src="/projects/to-do-list/HTML-CSS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
+            <iframe src="/projects/to-do-list/HTML-CSS/index.html" class="w-full h-120 rounded-lg"
+              title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-[28px] font-semibold uppercase tracking-widest text-purple-400 inline-block typing2">/*CSS*/</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-purple-400 inline-block typing2">/*CSS*/
+            </p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML-CSS.txt" target="_blank">
-              <UButton icon="material-symbols:folder-open-rounded"
-                class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
-                Open Source Code
-              </UButton>
+                <UButton icon="material-symbols:folder-open-rounded"
+                  class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
+                  Open Source Code
+                </UButton>
               </a>
             </div>
           </div>
@@ -237,16 +342,18 @@ definePageMeta({
         <div
           class="flex flex-col gap-4 p-4 rounded-xl shadow-md transition-all duration-300 hover:shadow-blue-500/50 hover:shadow-lg hover:bg-white/5">
           <div class="bg-white/50 rounded-2xl overflow-hidden">
-            <iframe src="/projects/to-do-list/HTML-CSS-JS/index.html" class="w-full h-120 rounded-lg" title="To-Do List Project" />
+            <iframe src="/projects/to-do-list/HTML-CSS-JS/index.html" class="w-full h-120 rounded-lg"
+              title="To-Do List Project" />
           </div>
           <div class="flex items-center justify-between">
-            <p class="text-[28px] font-semibold uppercase tracking-widest text-blue-400 inline-block typing3">//Javascript</p>
+            <p class="text-[28px] font-semibold uppercase tracking-widest text-blue-400 inline-block typing3">
+              //Javascript</p>
             <div class="flex justify-end">
               <a href="/projects/to-do-list/to-do-source-code/HTML-CSS-JS.txt" target="_blank">
-              <UButton icon="material-symbols:folder-open-rounded"
-                class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
-                Open Source Code
-              </UButton>
+                <UButton icon="material-symbols:folder-open-rounded"
+                  class="rounded-lg shadow-2xl cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 p-2">
+                  Open Source Code
+                </UButton>
               </a>
             </div>
           </div>

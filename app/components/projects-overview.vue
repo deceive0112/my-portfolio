@@ -137,19 +137,39 @@ const onMouseMove = (e) => {
         <p class="gap-2 p-3 rounded-xl">Test test</p>
       </div>
 
+      <!-- Project 3 -->
       <div
         class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
-        <p class="text-sm text-gray-400 font-semibold mb-2 uppercase tracking-widest">Backend & Database</p>
-        <div class="flex flex-wrap gap-2">
+        <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work in Progress</p>
+
+        <a href="https://github.com/deceive0112/" target="_blank"
+          class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
+
+          <img src="https://opengraph.githubassets.com/2/deceive0112/"
+            class="w-full object-cover" />
+
+          <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+            <UIcon name="mdi:github" class="size-4 text-gray-400" />
+            <span class="text-xs text-gray-400">github.com</span>
+            <span class="text-xs font-bold ml-1">deceive0112/</span>
+          </div>
+        </a>
+
+        <div class="flex flex-wrap gap-2 mt-2.5">
           <div class="flex flex-col items-center gap-1">
-            <UIcon name="devicon:firebase" class="rounded-xl shadow-xl size-13 p-1" />
-            <span class="text-[10px] text-gray-400">Firebase</span>
+            <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-10 p-1" />
+            <span class="text-[7px] text-gray-400">HTML</span>
           </div>
           <div class="flex flex-col items-center gap-1">
-            <UIcon name="devicon:bun" class="rounded-xl shadow-xl size-13 p-1" />
-            <span class="text-[10px] text-gray-400">Bun</span>
+            <UIcon name="devicon:css" class="rounded-xl shadow-xl size-10 p-1" />
+            <span class="text-[7px] text-gray-400">CSS</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-10 p-1" />
+            <span class="text-[7px] text-gray-400">JavaScript</span>
           </div>
         </div>
+        <p class="gap-2 p-3 rounded-xl">Test test</p>
       </div>
 
       <div class="flex justify-end col-span-3">
