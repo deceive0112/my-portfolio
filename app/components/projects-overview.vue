@@ -103,7 +103,7 @@ const onMouseMove = (e: MouseEvent) => {
             <span class="text-gray-400">Form Submit</span>
           </div>
         </div>
-        <p class="gap-2 p-3 rounded-xl">Test test</p>
+        <p class="gap-2 p-3 rounded-xl text-sm">Test test</p>
       </div>
 
       <!-- Project 2 -->
@@ -139,7 +139,8 @@ const onMouseMove = (e: MouseEvent) => {
             <span class="text-gray-400">JavaScript</span>
           </div>
         </div>
-        <p class="gap-2 p-3 rounded-xl">Test test</p>
+        <p class="gap-2 p-3 rounded-xl text-sm">Vanilla JS notepad web app with dynamic tasks and localStorage persistence, built using pure HTML, CSS, and JavaScript.
+           — no frameworks or libraries.</p>
       </div>
 
       <!-- Project 3 -->
@@ -175,7 +176,7 @@ const onMouseMove = (e: MouseEvent) => {
             <span class="text-gray-400">JavaScript</span>
           </div>
         </div>
-        <p class="gap-2 p-3 rounded-xl">Test test</p>
+        <p class="gap-2 p-3 rounded-xl text-sm">Test test</p>
       </div>
 
       <div class="flex justify-end col-span-3">
