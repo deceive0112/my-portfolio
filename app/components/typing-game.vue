@@ -63,39 +63,44 @@ onUnmounted(() => clearInterval(typingTimer))
 </script>
 
 <template>
-  <div class="p-2 rounded-xl flex flex-col items-center gap-2 shadow-md">
+  <!-- CHANGED: responsive padding -->
+  <div class="p-3 md:p-4 rounded-xl flex flex-col items-center gap-3 shadow-md">
 
-    <div class="flex gap-6 text-sm">
+    <!-- CHANGED: responsive gap and text -->
+    <div class="flex gap-4 md:gap-8 text-sm">
       <div class="flex flex-col items-center">
-        <span>Score</span>
-        <span class="text-lg font-bold text-green-400">{{ score }}</span>
+        <span class="text-xs md:text-sm">Score</span>
+        <span class="text-base md:text-lg font-bold text-green-400">{{ score }}</span>
       </div>
       <div class="flex flex-col items-center">
-        <span>Time</span>
-        <span class="text-lg font-bold" :class="timeLeft <= 10 ? 'text-red-400' : 'text-green-400'">{{ timeLeft }}s</span>
+        <span class="text-xs md:text-sm">Time</span>
+        <span class="text-base md:text-lg font-bold" :class="timeLeft <= 10 ? 'text-red-400' : 'text-green-400'">{{ timeLeft }}s</span>
       </div>
       <div class="flex flex-col items-center">
-        <span>WPM</span>
-        <span class="text-lg font-bold text-yellow-400">{{ wpm }}</span>
+        <span class="text-xs md:text-sm">WPM</span>
+        <span class="text-base md:text-lg font-bold text-yellow-400">{{ wpm }}</span>
       </div>
     </div>
 
-    <div class="text-xl font-mono font-bold tracking-widest p-2 rounded-xl bg-white/5 w-full text-center transition-colors duration-150 shadow-sm"
+    <!-- CHANGED: responsive text size -->
+    <div class="text-lg md:text-xl font-mono font-bold tracking-widest p-2 rounded-xl bg-white/5 w-full text-center transition-colors duration-150 shadow-sm"
       :class="isWrong ? 'text-red-400' : ''">
       {{ gameStarted ? currentWord : '???' }}
     </div>
 
+    <!-- CHANGED: responsive text size -->
     <input ref="inputRef" v-model="typingInput" @input="checkInput"
       :disabled="!gameStarted" placeholder="Start typing..."
-      class="w-full px-2 py-2 rounded-xl bg-white/5 border focus:outline-none focus:ring-1 text-center font-mono text-[18px] disabled:opacity-50 transition-colors duration-150 shadow-sm"
+      class="w-full px-3 py-2 rounded-xl bg-white/5 border focus:outline-none focus:ring-1 text-center font-mono text-base md:text-lg disabled:opacity-50 transition-colors duration-150 shadow-sm"
       :class="isWrong ? 'border-red-500 focus:ring-red-500' : 'border-white/10 focus:ring-blue-500'" />
 
     <Transition enter-active-class="transition-all duration-500"
       enter-from-class="opacity-0 translate-y-3"
       enter-to-class="opacity-100 translate-y-0">
       <div v-if="gameOver" class="text-center">
-        <p class="text-[20px] font-bold">Game Over!</p>
-        <p class="text-sm mt-1">
+        <!-- CHANGED: responsive text size -->
+        <p class="text-lg md:text-xl font-bold">Game Over!</p>
+        <p class="text-xs md:text-sm mt-1">
           Words: <span class="text-blue-400 mr-2">{{ score }}</span>
           WPM: <span class="text-yellow-400">{{ wpm }}</span>
         </p>
@@ -103,7 +108,7 @@ onUnmounted(() => clearInterval(typingTimer))
     </Transition>
 
     <button @click="startGame"
-      class="px-2 py-2 bg-blue-500 hover:bg-blue-600 rounded-xl font-bold uppercase text-sm cursor-pointer transition-colors duration-200 border-2 shadow-md">
+      class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-xl font-bold uppercase text-xs md:text-sm cursor-pointer transition-colors duration-200 border-2 shadow-md">
       {{ gameOver || !gameStarted ? 'Start' : 'Restart' }}
     </button>
   </div>

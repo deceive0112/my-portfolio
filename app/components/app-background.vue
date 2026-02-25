@@ -4,9 +4,6 @@ import * as THREE from 'three'
 const showGif = useState('showGif', () => true)
 
 const colorMode = useColorMode()
-const toggleTheme = () => {
-  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
-}
 
 const x = ref(0)
 const y = ref(0)
@@ -51,7 +48,9 @@ const initThree = () => {
   renderer.setPixelRatio(window.devicePixelRatio)
 
   const geometry = new THREE.BufferGeometry()
-  const count = 900
+  // CHANGED: fewer stars on mobile for performance
+  const isMobile = window.innerWidth < 768
+  const count = isMobile ? 400 : 900
   const positions = new Float32Array(count * 3)
   for (let i = 0; i < count * 3; i++) {
     positions[i] = (Math.random() - 0.5) * 1000
@@ -81,7 +80,10 @@ watch(() => colorMode.value, (val) => {
 })
 
 onMounted(() => {
-  window.addEventListener('mousemove', handleMouse)
+  // CHANGED: only track mouse on non-touch devices
+  if (window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('mousemove', handleMouse)
+  }
   initThree()
   animate()
 })
@@ -99,8 +101,10 @@ onUnmounted(() => {
 
     <canvas ref="canvas" class="fixed inset-0 w-full h-full -z-10" />
 
+    <!-- CHANGED: smaller gif on mobile, hidden on touch devices -->
     <img v-if="!showGif"
-      :src="gifSrc" class="pointer-events-none absolute w-30 h-30"
+      :src="gifSrc"
+      class="pointer-events-none absolute w-20 h-20 md:w-30 md:h-30 hidden md:block"
       :style="{ left: `${gifX + 90}px`, top: `${gifY + 60}px`, transform: 'translate(-50%, -50%)' }" />
 
   </div>
