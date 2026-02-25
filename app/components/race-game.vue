@@ -48,7 +48,6 @@ onUnmounted(() => clearInterval(interval))
 
 <template>
   <div class="p-2 rounded-xl">
-    <h2 class="text-xl font-bold text-center mb-2">🏁Language Race🏁</h2>
 
     <Transition enter-active-class="transition-all duration-500" enter-from-class="opacity-0 scale-50" enter-to-class="opacity-100 scale-100">
       <div v-if="winner" class="text-center items-center justify-center mb-2 p-1">

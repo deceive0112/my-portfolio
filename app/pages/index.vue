@@ -390,8 +390,8 @@ const onMouseMove = (e: MouseEvent) => {
           <TicTacToe />
         </div>
         <div
-          class="bg-sky-400 flex items-center text-center justify-center col-span-1 p-30 basis-sm rounded-xl text-3xl">
-          Test?</div>
+          class="flex items-center text-center justify-center col-span-1 p-2 basis-sm rounded-xl text-lg">
+          <TypingGame /></div>
         <div
           class="col-span-2 p-1 basis-sm rounded-xl text-lg backdrop-blur-sm">
           <RaceGame /></div>
