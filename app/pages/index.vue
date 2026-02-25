@@ -250,19 +250,20 @@ const onMouseMove = (e: MouseEvent) => {
             class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
             <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work in Progress</p>
 
-            <!-- CHANGED: wrapped in flex row -->
             <div class="flex flex-row gap-3 items-start">
 
-              <!-- GitHub thumbnail -->
-              <a href="https://github.com/deceive0112/" target="_blank"
-                class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-103 transition-all duration-300 cursor-pointer border border-white/10 flex-1">
-                <img src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" />
-                <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+              <div
+                class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
+                <a href="https://deceive0112.github.io/" target="_blank">
+                  <img src="https://opengraph.githubassets.com/2/deceive0112/" class="w-3xl object-cover" />
+                </a>
+                <a href="https://github.com/deceive0112/" target="_blank"
+                  class="flex items-center gap-2 px-3 py-2 bg-white/5">
                   <UIcon name="mdi:github" class="size-4 text-gray-400" />
                   <span class="text-xs text-gray-400">github.com</span>
-                  <span class="text-xs font-bold ml-1">deceive0112/</span>
-                </div>
-              </a>
+                  <span class="text-xs font-bold ml-1">deceive0112/Vanilla-Web-App-Notedpad</span>
+                </a>
+              </div>
 
               <div ref="iconScroll"
                 class="flex flex-col gap-2 overflow-y-auto cursor-grab active:cursor-grabbing select-none self-stretch mt-1"

@@ -35,17 +35,19 @@ const onMouseMove = (e: MouseEvent) => {
         <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Portfolio</p>
 
         <!-- Project 1 -->
-        <a href="https://github.com/deceive0112/general-mike" target="_blank"
+        <div
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
-
-          <img src="https://opengraph.githubassets.com/1/deceive0112/general-mike" class="w-full object-cover" />
-
-          <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+          <a href="https://general-mike.vercel.app/" target="_blank">
+            <img src="https://opengraph.githubassets.com/2/deceive0112/general-mike"
+              class="w-full object-cover" />
+          </a>
+          <a href="https://github.com/deceive0112/general-mike" target="_blank"
+            class="flex items-center gap-2 px-3 py-2 bg-white/5">
             <UIcon name="mdi:github" class="size-4 text-gray-400" />
             <span class="text-xs text-gray-400">github.com</span>
             <span class="text-xs font-bold ml-1">deceive0112/general-mike</span>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div ref="scrollContainer"
           class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
@@ -109,18 +111,19 @@ const onMouseMove = (e: MouseEvent) => {
         class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
         <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Vanilla Web App Notepad</p>
 
-        <a href="https://github.com/deceive0112/Vanilla-Web-App-Notepad" target="_blank"
+        <div
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
-
-          <img src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad"
-            class="w-full object-cover" />
-
-          <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+          <a href="https://deceive0112.github.io/Vanilla-Web-App-Notepad/" target="_blank">
+            <img src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad"
+              class="w-full object-cover" />
+          </a>
+          <a href="https://github.com/deceive0112/Vanilla-Web-App-Notepad" target="_blank"
+            class="flex items-center gap-2 px-3 py-2 bg-white/5">
             <UIcon name="mdi:github" class="size-4 text-gray-400" />
             <span class="text-xs text-gray-400">github.com</span>
             <span class="text-xs font-bold ml-1">deceive0112/Vanilla-Web-App-Notedpad</span>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
           <div class="flex flex-col items-center gap-1">
@@ -142,19 +145,21 @@ const onMouseMove = (e: MouseEvent) => {
       <!-- Project 3 -->
       <div
         class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
-        <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work in Progress</p>
+        <p class="text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work In Progress</p>
 
-        <a href="https://github.com/deceive0112/" target="_blank"
+        <div
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
-
-          <img src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" />
-
-          <div class="flex items-center gap-2 px-3 py-2 bg-white/5">
+          <a href="https://deceive0112.github.io/" target="_blank">
+            <img src="https://opengraph.githubassets.com/2/deceive0112/"
+              class="w-full object-cover" />
+          </a>
+          <a href="https://github.com/deceive0112/" target="_blank"
+            class="flex items-center gap-2 px-3 py-2 bg-white/5">
             <UIcon name="mdi:github" class="size-4 text-gray-400" />
             <span class="text-xs text-gray-400">github.com</span>
-            <span class="text-xs font-bold ml-1">deceive0112/</span>
-          </div>
-        </a>
+            <span class="text-xs font-bold ml-1">deceive0112/Work In Progress</span>
+          </a>
+        </div>
 
         <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
           <div class="flex flex-col items-center gap-1">
