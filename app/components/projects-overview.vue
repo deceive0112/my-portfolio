@@ -48,57 +48,57 @@ const onMouseMove = (e: MouseEvent) => {
         </a>
 
         <div ref="scrollContainer"
-          class="flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
+          class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
           style="scrollbar-width: none;" @mousedown="onMouseDown" @mouseleave="onMouseLeave" @mouseup="onMouseUp"
           @mousemove="onMouseMove">
 
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:vuejs" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Vue</span>
+            <span class="text-gray-400">Vue</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:css" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">CSS</span>
+            <span class="text-gray-400">CSS</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">HTML</span>
+            <span class="text-gray-400">HTML</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">TypeScript</span>
+            <span class="text-gray-400">TypeScript</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">JavaScript</span>
+            <span class="text-gray-400">JavaScript</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:nuxtjs" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Nuxt</span>
+            <span class="text-gray-400">Nuxt</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:tailwindcss" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Tailwind CSS</span>
+            <span class="text-gray-400">Tailwind CSS</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:shadcnui" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Shadcn UI</span>
+            <UIcon name="vscode-icons:file-type-light-shadcn" class="rounded-xl shadow-xl size-10 p-1 dark:invert" />
+            <span class="text-gray-400">Shadcn UI</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:radixui" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Radix UI</span>
+            <UIcon name="simple-icons:radixui" class="rounded-xl shadow-xl size-10 p-1 dark:text-white text-black" />
+            <span class="text-gray-400">Radix UI</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:vercel" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Vercel</span>
+            <UIcon name="devicon:vercel" class="rounded-xl shadow-xl size-10 p-1 dark:invert" />
+            <span class="text-gray-400">Vercel</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:threejs" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Three</span>
+            <UIcon name="devicon:threejs" class="rounded-xl shadow-xl size-10 p-1 dark:invert" />
+            <span class="text-gray-400">Three</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:formsubmit" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">Form Submit</span>
+            <span class="text-gray-400">Form Submit</span>
           </div>
         </div>
         <p class="gap-2 p-3 rounded-xl">Test test</p>
@@ -122,18 +122,18 @@ const onMouseMove = (e: MouseEvent) => {
           </div>
         </a>
 
-        <div class="flex flex-wrap gap-2 mt-2.5">
+        <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">HTML</span>
+            <span class="text-gray-400">HTML</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:css" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">CSS</span>
+            <span class="text-gray-400">CSS</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">JavaScript</span>
+            <span class="text-gray-400">JavaScript</span>
           </div>
         </div>
         <p class="gap-2 p-3 rounded-xl">Test test</p>
@@ -156,18 +156,18 @@ const onMouseMove = (e: MouseEvent) => {
           </div>
         </a>
 
-        <div class="flex flex-wrap gap-2 mt-2.5">
+        <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">HTML</span>
+            <span class="text-gray-400">HTML</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:css" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">CSS</span>
+            <span class="text-gray-400">CSS</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-10 p-1" />
-            <span class="text-[7px] text-gray-400">JavaScript</span>
+            <span class="text-gray-400">JavaScript</span>
           </div>
         </div>
         <p class="gap-2 p-3 rounded-xl">Test test</p>
