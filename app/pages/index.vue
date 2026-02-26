@@ -8,12 +8,6 @@ definePageMeta({
 </script>
 
 <style>
-
-.slide-in {
-  animation: fadeUp 0.8s ease forwards;
-  opacity: 0;
-}
-
 @keyframes fadeUp {
   from {
     opacity: 0;

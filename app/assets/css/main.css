@@ -119,6 +119,11 @@
   }
 }
 
+.slide-in {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
 /**/
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
