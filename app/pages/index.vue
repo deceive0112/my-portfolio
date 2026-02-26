@@ -189,7 +189,7 @@ onUnmounted(() => {
     <div class="flex flex-col xl:flex-row gap-5">
 
       <div class="w-full xl:basis-3/5">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
+        <h1 class="text-xl sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
           Hey! <span class="px-1">I'm</span>
           <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true"
             @mouseleave="isHovered = false">{{ title }}</a>
@@ -469,7 +469,7 @@ onUnmounted(() => {
     </div>
 
     <!-- Form & Mini Games -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-9 mt-15 lg:mt-30 mb-15 lg:mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-9 mt-15 lg:mt-30">
       <ContactForm />
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 col-span-1 p-4 rounded-xl backdrop-blur-xl">
         <div class="flex items-center justify-center col-span-1 p-2 rounded-xl backdrop-blur-sm shadow-sm">
