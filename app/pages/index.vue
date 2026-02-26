@@ -189,7 +189,7 @@ onUnmounted(() => {
     <div class="flex flex-col xl:flex-row gap-5">
 
       <div class="w-full xl:basis-3/5">
-        <h1 class="text-xl sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
+        <h1 class="text-lg sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
           Hey! <span class="px-1">I'm</span>
           <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true"
             @mouseleave="isHovered = false">{{ title }}</a>
