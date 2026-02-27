@@ -67,7 +67,7 @@ const submitForm = async () => {
   <div class="flex-col p-3 md:p-4 rounded-xl backdrop-blur-3xl shadow-2xl" id="form">
     <!-- CHANGED: responsive title -->
     <h3 class="text-xl md:text-2xl font-bold">Let's Work Together</h3>
-    <p class="mt-2 md:mt-3 text-sm md:text-lg">I'm currently open to new opportunities and collaborations.
+    <p class="mt-2 md:mt-3 text-sm md:text-lg text-justify">I'm currently open to new opportunities and collaborations.
       If you're interested in working together or just want to connect, feel free to reach out!</p>
 
     <form @submit.prevent="submitForm">
