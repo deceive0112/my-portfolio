@@ -10,8 +10,7 @@ const isHoveredEdu = ref(false)
       Educational Background
     </h2>
 
-    <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl"
-      @mouseenter="isHoveredEdu = true"
+    <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl" @mouseenter="isHoveredEdu = true"
       @mouseleave="isHoveredEdu = false">
 
       <!-- USTP -->
@@ -22,16 +21,19 @@ const isHoveredEdu = ref(false)
             class="w-14 h-14 md:w-20 md:h-20 min-w-14 md:min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer" />
         </a>
         <div class="w-full">
-          <p class="font-bold text-[11px] md:text-[13px] mt-2">University of Science and Technology of the Southern Philippines (USTP)</p>
+          <p class="font-bold text-[11px] md:text-[13px] mt-2">University of Science and Technology of the Southern
+            Philippines (USTP)</p>
           <!-- CHANGED: stack on mobile, row on tablet+ -->
           <div class="flex flex-col sm:flex-row sm:items-center">
-            <p class="text-[11px] md:text-[13px] text-gray-400 mt-1">Bachelor of Science In Computer Engineering (BSCpE)</p>
+            <p class="text-[11px] md:text-[13px] text-gray-400 mt-1">Bachelor of Science In Computer Engineering (BSCpE)
+            </p>
             <p class="text-[11px] md:text-[13px] text-gray-400 mt-1 sm:ml-auto">2020 - 2024</p>
           </div>
           <p class="text-[11px] md:text-[12px] mt-1">Thesis:</p>
           <ul class="list-disc ml-3 px-1">
             <li class="text-[11px] md:text-[12px] mt-0.5">Specialization in IoT.</li>
-            <li class="text-[11px] md:text-[12px] mt-0.5 text-justify">Thesis about a portable communication device for deaf-mute individuals using ensemble.</li>
+            <li class="text-[11px] md:text-[12px] mt-0.5 text-justify">Thesis about a portable communication device for
+              deaf-mute individuals using ensemble.</li>
           </ul>
         </div>
       </div>
@@ -50,14 +52,17 @@ const isHoveredEdu = ref(false)
             <p class="font-bold text-[11px] md:text-[13px] mt-2">Liceo de Cagayan University (LDCU)</p>
             <!-- CHANGED: stack on mobile, row on tablet+ -->
             <div class="flex flex-col sm:flex-row sm:items-center">
-              <p class="text-[11px] md:text-[13px] text-gray-400 mt-1">Science, Technology, Engineering, and Mathematics</p>
+              <p class="text-[11px] md:text-[13px] text-gray-400 mt-1">Science, Technology, Engineering, and Mathematics
+                (STEM)</p>
               <p class="text-[11px] md:text-[13px] text-gray-400 mt-1 sm:ml-auto">2018 - 2020</p>
             </div>
-            <p class="text-[11px] md:text-[13px] text-gray-400">(STEM)</p>
+            <div>
             <p class="text-[11px] md:text-[12px] mt-1">Research:</p>
+            </div>
             <ul class="list-disc ml-3 px-1">
               <li class="text-[11px] md:text-[12px] mt-0.5">Designer of the building model's structure.</li>
-              <li class="text-[11px] md:text-[12px] mt-0.5 text-justify">Research about the importance of implementing of buoyancy and bearing systems on buildings.</li>
+              <li class="text-[11px] md:text-[12px] mt-0.5 text-justify">Research about the importance of implementing
+                of buoyancy and bearing systems on buildings.</li>
             </ul>
           </div>
         </div>

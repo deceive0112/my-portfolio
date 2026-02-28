@@ -1,27 +1,7 @@
 <script setup lang="ts">
-const scrollContainer = ref<HTMLDivElement | null>(null)
-let isDown = false
-let startX = 0
-let scrollLeft = 0
-
-const onMouseDown = (e: MouseEvent) => {
-  isDown = true
-  if (!scrollContainer.value) return
-  startX = e.pageX - scrollContainer.value.offsetLeft
-  scrollLeft = scrollContainer.value.scrollLeft
-}
-
-const onMouseLeave = () => { isDown = false }
-const onMouseUp = () => { isDown = false }
-
-const onMouseMove = (e: MouseEvent) => {
-  if (!isDown) return
-  e.preventDefault()
-  if (!scrollContainer.value) return
-  const x = e.pageX - scrollContainer.value.offsetLeft
-  const walk = (x - startX) * 2
-  scrollContainer.value.scrollLeft = scrollLeft - walk
-}
+const drag1 = useDragScroll()
+const drag2 = useDragScroll()
+const drag3 = useDragScroll()
 </script>
 
 <template>
@@ -49,11 +29,15 @@ const onMouseMove = (e: MouseEvent) => {
           </a>
         </div>
 
-        <!-- CHANGED: drag scroll icons -->
-        <div ref="scrollContainer"
+        <!-- CHANGED: drag1 applied -->
+        <div
+          :ref="drag1.scrollContainer"
+          @mousedown="drag1.onMouseDown"
+          @mouseleave="drag1.onMouseLeave"
+          @mouseup="drag1.onMouseUp"
+          @mousemove="drag1.onMouseMove"
           class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
-          style="scrollbar-width: none;"
-          @mousedown="onMouseDown" @mouseleave="onMouseLeave" @mouseup="onMouseUp" @mousemove="onMouseMove">
+          style="scrollbar-width: none;">
           <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:vuejs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">Vue</span>
@@ -122,21 +106,28 @@ const onMouseMove = (e: MouseEvent) => {
             class="flex items-center gap-2 px-3 py-2 bg-white/5">
             <UIcon name="mdi:github" class="size-4 text-gray-400" />
             <span class="text-xs text-gray-400">github.com</span>
-            <!-- CHANGED: truncate long repo name on small screens -->
             <span class="text-xs font-bold ml-1 truncate">deceive0112/Vanilla-Web-App-Notepad</span>
           </a>
         </div>
 
-        <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
-          <div class="flex flex-col items-center gap-1">
+        <!-- CHANGED: drag2 applied, flex-wrap removed in favor of drag scroll -->
+        <div
+          :ref="drag2.scrollContainer"
+          @mousedown="drag2.onMouseDown"
+          @mouseleave="drag2.onMouseLeave"
+          @mouseup="drag2.onMouseUp"
+          @mousemove="drag2.onMouseMove"
+          class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
+          style="scrollbar-width: none;">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">HTML</span>
           </div>
-          <div class="flex flex-col items-center gap-1">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">CSS</span>
           </div>
-          <div class="flex flex-col items-center gap-1">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">JavaScript</span>
           </div>
@@ -160,16 +151,24 @@ const onMouseMove = (e: MouseEvent) => {
           </a>
         </div>
 
-        <div class="flex flex-wrap gap-2 mt-2.5 text-[7px]">
-          <div class="flex flex-col items-center gap-1">
+        <!-- CHANGED: drag3 applied -->
+        <div
+          :ref="drag3.scrollContainer"
+          @mousedown="drag3.onMouseDown"
+          @mouseleave="drag3.onMouseLeave"
+          @mouseup="drag3.onMouseUp"
+          @mousemove="drag3.onMouseMove"
+          class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
+          style="scrollbar-width: none;">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">HTML</span>
           </div>
-          <div class="flex flex-col items-center gap-1">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">CSS</span>
           </div>
-          <div class="flex flex-col items-center gap-1">
+          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">JavaScript</span>
           </div>
@@ -177,13 +176,13 @@ const onMouseMove = (e: MouseEvent) => {
         <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Test test</p>
       </div>
 
-      <!-- CHANGED: col-span-1 md:col-span-2 lg:col-span-3 for button row -->
+      <!-- button row -->
       <div class="flex justify-end col-span-1 md:col-span-2 lg:col-span-3">
         <a href="/projects">
-        <UButton icon="material-symbols:grid-view-outline-rounded"
-          class="rounded-lg shadow-md cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
-          View More
-        </UButton>
+          <UButton icon="material-symbols:grid-view-outline-rounded"
+            class="rounded-lg shadow-md cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0">
+            View More
+          </UButton>
         </a>
       </div>
 

@@ -1,24 +1,5 @@
 <script setup lang="ts">
-const carouselRef = ref<HTMLDivElement | null>(null)
-const shouldAnimate = ref(false)
-
-const checkOverflow = () => {
-    if (carouselRef.value) {
-        const parent = carouselRef.value.parentElement
-        if (parent) {
-            shouldAnimate.value = carouselRef.value.scrollWidth / 2 > parent.clientWidth
-        }
-    }
-}
-
-onMounted(() => {
-    checkOverflow()
-    window.addEventListener('resize', checkOverflow)
-})
-
-onUnmounted(() => {
-    window.removeEventListener('resize', checkOverflow)
-})
+const { scrollContainer, onMouseDown, onMouseLeave, onMouseUp, onMouseMove } = useDragScroll()
 </script>
 
 <template>
@@ -39,70 +20,58 @@ onUnmounted(() => {
                 </a>
             </div>
 
-            <div class="overflow-hidden mt-2.5 relative">
-                <template v-if="shouldAnimate">
-                    <div
-                        class="absolute left-0 top-0 bottom-0 w-8 bg-linear-to-r from-[#0f172a] to-transparent z-10 pointer-events-none" />
-                    <div
-                        class="absolute right-0 top-0 bottom-0 w-8 bg-linear-to-l from-[#0f172a] to-transparent z-10 pointer-events-none" />
-                </template>
+            <div
+                ref="scrollContainer"
+                @mousedown="onMouseDown"
+                @mouseleave="onMouseLeave"
+                @mouseup="onMouseUp"
+                @mousemove="onMouseMove"
+                class="overflow-x-auto mt-2.5 cursor-grab active:cursor-grabbing select-none"
+                style="scrollbar-width: none;">
 
-                <div ref="carouselRef" :class="shouldAnimate ? 'carousel-track w-max' : 'flex flex-wrap'"
-                    class="text-[12px] flex gap-4">
+                <div class="text-[10px] flex gap-2 w-max cursor-grab">
 
-                    <!-- original set -->
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:vuejs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">Vue</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">CSS</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">HTML</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">TypeScript</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">JavaScript</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 shrink-0">
-                        <UIcon name="devicon:nuxtjs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                        <span class="text-gray-400">Nuxt</span>
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:vuejs" class="size-12 rounded-2xl" />
+                        </div>
+                        <span class="text-gray-400 text-center">Vue</span>
                     </div>
 
-                    <!-- duplicate set — only visible when animating -->
-                    <template v-if="shouldAnimate">
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:vuejs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">Vue</span>
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12 ">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:css" class="size-12 rounded-2xl" />
                         </div>
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">CSS</span>
+                        <span class="text-gray-400 text-center">CSS</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:html5" class="size-12 rounded-2xl" />
                         </div>
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">HTML</span>
+                        <span class="text-gray-400 text-center">HTML</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:typescript" class="size-12 rounded-2xl" />
                         </div>
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">TypeScript</span>
+                        <span class="text-gray-400 text-center">TypeScript</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:javascript" class="size-12 rounded-2xl" />
                         </div>
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">JavaScript</span>
+                        <span class="text-gray-400 text-center">JavaScript</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:nuxtjs" class="size-12 rounded-2xl" />
                         </div>
-                        <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="devicon:nuxtjs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-                            <span class="text-gray-400">Nuxt</span>
-                        </div>
-                    </template>
+                        <span class="text-gray-400 text-center">Nuxt</span>
+                    </div>
 
                 </div>
             </div>
