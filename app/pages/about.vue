@@ -11,10 +11,8 @@ definePageMeta({
         <!-- CHANGED: mx-30 for left/right margin, but mx-4 on mobile so it doesn't overflow -->
         <div class="mx-4 sm:mx-10 lg:mx-60 grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
 
-            <!-- photo + spotify — stack on mobile, side by side on lg -->
             <div class="flex flex-col gap-4">
 
-                <!-- photo -->
                 <div class="flex items-center justify-center p-4 rounded-xl backdrop-blur-xl shadow-lg">
                     <NuxtImg src="/selfie-ghibli-style.png" loading="lazy"
                         class="w-60 h-70 sm:w-70 sm:h-80 xl:w-80 xl:h-90 rounded-2xl shadow-lg object-cover" />
@@ -30,25 +28,46 @@ definePageMeta({
 
             </div>
 
-            <!-- about text -->
-            <div class="lg:col-span-2 flex flex-col justify-start gap-3 p-4 rounded-xl backdrop-blur-xl shadow-lg">
+            <div
+                class="lg:col-span-2 flex flex-col justify-start gap-3 p-4 rounded-xl backdrop-blur-xl shadow-lg text-gray-500">
 
                 <p class="text-base md:text-xl text-justify font-sans">
-                    A Computer Engineering graduate from the University of Science and Technology of the Southern
-                    Philippines (USTP), with a thesis focused on IoT — a portable communication device for deaf-mute
+                    A <span class="underline decoration-dash decoration-rose-300">Computer Engineering</span> graduate
+                    from the University of Science and Technology of the Southern
+                    Philippines (USTP), with a thesis focused on IoT a portable communication device for deaf-mute
                     individuals using ensemble learning.
                 </p>
 
                 <p class="text-base md:text-xl text-justify font-sans">
-                    I'm a developer with a focus on frontend and embedded systems, building web applications using
-                    Vue/Nuxt, Tailwind CSS, and TypeScript, while also working with hardware platforms like Arduino,
-                    ESP-32, and Raspberry Pi for IoT projects. I enjoy the challenge of working across both software
-                    and hardware — from crafting clean, responsive UIs to wiring circuits and writing firmware.
+                    I'm a <span class="underline decoration-dash decoration-red-300">developer</span> with a focus on
+                    <span class="underline decoration-dash decoration-pink-300">frontend</span> and
+                    <span class="underline decoration-dash decoration-fuchsia-300">embedded systems</span> , building
+                    <span class="underline decoration-dash decoration-purple-300">web applications</span> using
+                    <span class="underline decoration-dash decoration-violet-300">Vue/Nuxt</span> ,
+                    <span class="underline decoration-dash decoration-indigo-300">Tailwind CSS</span> , and
+                    <span class="underline decoration-dash decoration-blue-300">JavaScript/TypeScript</span> , while
+                    also working with hardware
+                    <span class="underline decoration-dash decoration-sky-300">hardware platforms</span> like
+                    <span class="underline decoration-dash decoration-cyan-300">Arduino</span> ,
+                    <span class="underline decoration-dash decoration-teal-300">ESP-32</span> , and
+                    <span class="underline decoration-dash decoration-emerald-300">Raspberry Pi</span> for
+                    <span class="underline decoration-dash decoration-green-300">IoT projects</span> . I enjoy the
+                    challenge of working across both
+                    <span class="underline decoration-dash decoration-lime-300">software</span> and
+                    <span class="underline decoration-dash decoration-yellow-300">hardware</span> from crafting
+                    <span class="underline decoration-dash decoration-amber-300">clean</span> ,
+                    <span class="underline decoration-dash decoration-orange-300">responsive UIs</span> to
+                    <span class="underline decoration-dash decoration-red-200">wiring circuits</span> and
+                    <span class="underline decoration-dash decoration-pink-200">writing firmware</span> .
                 </p>
 
                 <p class="text-base md:text-xl text-justify font-sans">
-                    Beyond work, I love exploring and tinkering with new technologies — whether it's a new framework,
-                    a microcontroller, or just something I haven't touched before. When I'm not in front of a screen,
+                    Beyond work, I love <span class="underline decoration-dash decoration-purple-200">exploring</span>
+                    and <span class="underline decoration-dash decoration-blue-200">tinkering</span> with
+                    <span class="underline decoration-dash decoration-cyan-200">new technologies</span> whether it's a
+                    <span class="underline decoration-dash decoration-emerald-200">new framework</span> ,
+                    a <span class="underline decoration-dash decoration-yellow-200">microcontroller</span> ,
+                    or just something I haven't touched before. When I'm not in front of a screen,
                     I'm probably petting one of my cats or listening to music. My taste runs across rock, pop, alt
                     rock, J-rock, ballad, and pretty much anything that hits right.
                 </p>
@@ -79,7 +98,8 @@ definePageMeta({
                             <UIcon name="mdi:email"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
-                                class="text-base md:text-xl font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Contact Me!</span>
+                                class="text-base md:text-xl font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Contact
+                                Me!</span>
                         </a>
                     </div>
                 </div>

@@ -29,7 +29,6 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <!-- CHANGED: drag1 applied -->
         <div
           :ref="drag1.scrollContainer"
           @mousedown="drag1.onMouseDown"
@@ -110,7 +109,6 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <!-- CHANGED: drag2 applied, flex-wrap removed in favor of drag scroll -->
         <div
           :ref="drag2.scrollContainer"
           @mousedown="drag2.onMouseDown"
@@ -151,7 +149,6 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <!-- CHANGED: drag3 applied -->
         <div
           :ref="drag3.scrollContainer"
           @mousedown="drag3.onMouseDown"
@@ -176,7 +173,6 @@ const drag3 = useDragScroll()
         <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Test test</p>
       </div>
 
-      <!-- button row -->
       <div class="flex justify-end col-span-1 md:col-span-2 lg:col-span-3">
         <a href="/projects">
           <UButton icon="material-symbols:grid-view-outline-rounded"
