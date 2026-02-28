@@ -50,10 +50,10 @@ const menuOpen = ref(false)
       leave-to-class="opacity-0 -translate-y-3">
       <div v-show="menuOpen"
         class="md:hidden absolute top-14 left-0 w-full z-40 bg-slate-600/90 rounded-2xl backdrop-blur-3xl flex flex-col items-start gap-4 px-6 py-4 shadow-xl">
-        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false">About</span>
-        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false">Projects</span>
-        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false">Tech Stack</span>
-        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false">Blog</span>
+        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false"><a href="/about">About</a></span>
+        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false"><a href="/projects">Projects</a></span>
+        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false"><a href="/tech-stack">Tech Stack</a></span>
+        <span class="text-lg font-bold font-mono hover:text-blue-500 transition-colors duration-200 cursor-pointer" @click="menuOpen = false"><a href="/blog">Blog</a></span>
       </div>
     </Transition>
 

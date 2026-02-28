@@ -59,7 +59,7 @@ definePageMeta({
                             <UIcon name="mdi:github"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
-                                class="text-base md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
+                                class="text-base md:text-xl font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
                         </a>
                     </div>
                     <span class="text-base md:text-lg font-mono">|</span>
@@ -69,7 +69,7 @@ definePageMeta({
                             <UIcon name="mdi:linkedin"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
-                                class="text-base md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
+                                class="text-base md:text-xl font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
                         </a>
                     </div>
                     <span class="text-base md:text-lg font-mono">|</span>
@@ -79,7 +79,7 @@ definePageMeta({
                             <UIcon name="mdi:email"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
-                                class="text-base md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Contact Me!</span>
+                                class="text-base md:text-xl font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Contact Me!</span>
                         </a>
                     </div>
                 </div>
