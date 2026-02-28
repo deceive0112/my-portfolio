@@ -13,6 +13,7 @@ const isHoveredEdu = ref(false)
     <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl" @mouseenter="isHoveredEdu = true"
       @mouseleave="isHoveredEdu = false">
 
+      <div class="absolute left-11 md:left-13 top-0 bottom-0 w-px bg-white/20"></div>
       <!-- USTP -->
       <div class="flex items-start gap-2 md:gap-3">
         <a href="https://www.ustp.edu.ph/" target="_blank">

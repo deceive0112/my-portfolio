@@ -41,13 +41,13 @@ definePageMeta({
 
 <template>
   <div class="flex flex-col min-h-screen"
-    style="padding-left: clamp(8px, 2vw, 80px); padding-right: clamp(8px, 2vw, 80px);">
+    style="padding-left: clamp(1px, 1vw, 80px); padding-right: clamp(1px, 1vw, 80px);">
 
     <!-- Portfolio Overview -->
     <div class="flex flex-col xl:flex-row gap-5">
 
       <div class="w-full xl:basis-3/5">
-        <h1 class="text-lg sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
           Hey! <span class="px-1">I'm</span>
           <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true"
             @mouseleave="isHovered = false">{{ title }}</a>
@@ -56,24 +56,26 @@ definePageMeta({
           </span>
         </h1>
 
-        <div class="flex flex-wrap items-center mt-1 gap-1.5">
-          <UIcon name="svg-spinners:pulse" class="size-5 text-green-400" />
-          <div class="group flex flex-row cursor-pointer overflow-hidden h-6 relative w-35">
-            <div class="flex absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
-              <span class="text-md whitespace-nowrap">Available for work</span>
+        <div class="flex flex-nowrap items-center mt-1 gap-1.5 md:gap-3 overflow-hidden">
+          <UIcon name="svg-spinners:pulse" class="size-3.5 md:size-4 text-green-400 shrink-0" />
+
+          <div
+            class="group flex flex-row cursor-pointer overflow-hidden h-5 md:h-6 relative w-25 md:w-36 shrink-0 mt-2">
+            <div
+              class="flex items-center absolute transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
+              <span class="text-xs md:text-[17px] whitespace-nowrap leading-none">Available for work</span>
             </div>
             <a href="#form">
               <div
-                class="flex absolute px-2 group-hover:text-blue-500 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-                <UIcon name="material-symbols:stacked-email-outline" class="size-5" />
-                <span class="text-md whitespace-nowrap px-2">Contact me!</span>
+                class="flex items-center absolute group-hover:text-blue-500 transition-all duration-300 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                <UIcon name="material-symbols:stacked-email-outline" class="size-3.5 md:size-4" />
+                <span class="text-xs md:text-[17px] whitespace-nowrap px-1 leading-none">Contact me!</span>
               </div>
             </a>
           </div>
-          <div class="flex gap-3">
-            <span>|</span>
-            <span class="text-sm md:text-md">Based in Cagayan de Oro City, Philippines.</span>
-          </div>
+
+          <span class="text-xs md:text-[17px] shrink-0 leading-none">|</span>
+          <span class="text-xs md:text-[17px] truncate leading-none">Based in Cagayan de Oro City, Philippines.</span>
         </div>
 
         <p class="text-base md:text-xl mt-5 backdrop-blur-lg rounded-xl cursor-pointer w-full p-3 text-justify">
@@ -93,35 +95,42 @@ definePageMeta({
             class="text-yellow-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">IoT</span>.
         </p>
 
-        <div class="flex flex-wrap mt-5 mb-10 xl:mb-25 gap-3 backdrop-blur-lg rounded-xl p-2">
+        <div class="flex flex-wrap mt-5 mb-5 xl:mb-25 gap-1 md:gap-3 backdrop-blur-lg rounded-xl p-2 items-center">
           <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-            <a href="https://github.com/deceive0112" target="_blank" class="inline-flex">
+            <a href="https://github.com/deceive0112" target="_blank" class="inline-flex items-center">
               <UIcon name="mdi:github"
                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
               <span
-                class="text-base md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
+                class="text-xs md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
             </a>
           </div>
-          <span class="text-base md:text-lg font-mono">|</span>
+
+          <span class="text-xs md:text-lg font-mono leading-none">|</span>
+
           <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-            <a href="https://www.linkedin.com/in/mike-general-256a63332/" target="_blank" class="inline-flex">
+            <a href="https://www.linkedin.com/in/mike-general-256a63332/" target="_blank"
+              class="inline-flex items-center">
               <UIcon name="mdi:linkedin"
                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
               <span
-                class="text-base md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
+                class="text-xs md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
             </a>
           </div>
-          <span class="text-base md:text-lg font-mono">|</span>
+
+          <span class="text-xs md:text-lg font-mono leading-none">|</span>
+
           <a href="/about"
-            class="text-base md:text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">More
-            about me... -></a>
+            class="inline-flex items-center text-xs md:text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">
+            More about me... ->
+          </a>
         </div>
       </div>
 
       <!-- CHANGED: two separate columns side by side on xl -->
       <div class="hidden xl:flex xl:basis-1/5 items-center justify-center mt-20">
         <div class="backdrop-blur-lg rounded-xl p-3 mb-25 shadow-xl">
-          <NuxtImg src="/gradpicprof2.jpg" loading="lazy" class="w-40 h-40 xl:w-50 xl:h-50 rounded-lg shadow-lg object-cover" />
+          <NuxtImg src="/gradpicprof2.jpg" loading="lazy"
+            class="w-40 h-40 xl:w-50 xl:h-50 rounded-lg shadow-lg object-cover" />
         </div>
       </div>
 
@@ -131,7 +140,8 @@ definePageMeta({
           leave-active-class="transition-all duration-600" leave-from-class="opacity-100 translate-x-0"
           leave-to-class="opacity-0 -translate-x-10">
           <div v-show="isHovered" class="backdrop-blur-lg rounded-xl p-3 mb-25 shadow-xl">
-            <NuxtImg src="/gradpic-prof.jpg" loading="lazy" class="w-40 h-40 xl:w-50 xl:h-50 rounded-lg shadow-lg object-cover" />
+            <NuxtImg src="/gradpic-prof.jpg" loading="lazy"
+              class="w-40 h-40 xl:w-50 xl:h-50 rounded-lg shadow-lg object-cover" />
           </div>
         </Transition>
       </div>

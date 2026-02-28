@@ -72,9 +72,9 @@ definePageMeta({
                     rock, J-rock, ballad, and pretty much anything that hits right.
                 </p>
 
-                <div class="flex flex-wrap mt-5 mb-4 xl:mb-8 gap-3 backdrop-blur-lg rounded-xl p-2">
+                <div class="flex flex-wrap mt-5 mb-4 xl:mb-8 gap-3 backdrop-blur-lg rounded-xl p-2 items-center">
                     <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
-                        <a href="https://github.com/deceive0112" target="_blank" class="inline-flex">
+                        <a href="https://github.com/deceive0112" target="_blank" class="inline-flex items-center">
                             <UIcon name="mdi:github"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
@@ -84,7 +84,7 @@ definePageMeta({
                     <span class="text-base md:text-lg font-mono">|</span>
                     <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
                         <a href="https://www.linkedin.com/in/mike-general-256a63332/" target="_blank"
-                            class="inline-flex">
+                            class="inline-flex items-center">
                             <UIcon name="mdi:linkedin"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
@@ -94,7 +94,7 @@ definePageMeta({
                     <span class="text-base md:text-lg font-mono">|</span>
                     <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
                         <a href="mailto:mikegeneral178@gmail.com?subject=Hello&body=I want to connect!" target="_blank"
-                            class="inline-flex">
+                            class="inline-flex items-center">
                             <UIcon name="mdi:email"
                                 class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
                             <span
@@ -102,6 +102,13 @@ definePageMeta({
                                 Me!</span>
                         </a>
                     </div>
+                    <span class="text-base md:text-lg font-mono">|</span>
+                    <a href="/school/General-Mike_CV.pdf" target="_blank">
+                        <UButton icon="material-symbols:download-rounded"
+                            class="rounded-lg shadow-md cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 text-xs md:text-sm">
+                            View Resume
+                        </UButton>
+                    </a>
                 </div>
             </div>
 

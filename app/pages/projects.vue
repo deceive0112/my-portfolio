@@ -84,7 +84,7 @@ const drag4 = useDragScroll()
                             <span class="text-gray-400">Bun</span>
                         </div>
                         <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="d" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+                            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
                             <span class="text-gray-400">Form Submit</span>
                         </div>
                     </div>
@@ -225,7 +225,7 @@ const drag4 = useDragScroll()
                             <span class="text-gray-400">Bun</span>
                         </div>
                         <div class="flex flex-col items-center gap-1 shrink-0">
-                            <UIcon name="d" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+                            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
                             <span class="text-gray-400">Form Submit</span>
                         </div>
                     </div>
