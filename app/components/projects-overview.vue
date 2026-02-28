@@ -8,16 +8,19 @@ const drag3 = useDragScroll()
   <!-- CHANGED: col-span-3 removed, use full width instead -->
   <div class="w-full mt-10 md:mt-15">
     <!-- CHANGED: responsive title text -->
-    <h2 class="flex text-2xl md:text-3xl lg:text-4xl uppercase font-bold items-center text-center justify-center mb-1">Projects</h2>
+    <h2 class="flex text-2xl md:text-3xl lg:text-4xl uppercase font-bold items-center text-center justify-center mb-1">
+      Projects</h2>
 
     <!-- CHANGED: grid-cols-1 on mobile, 2 on tablet, 3 on desktop -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-3 rounded-xl backdrop-blur-sm shadow-2xl">
 
       <!-- Project 1 -->
-      <div class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
+      <div
+        class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
         <p class="text-sm md:text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Portfolio</p>
 
-        <div class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
+        <div
+          class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://general-mike.vercel.app/" target="_blank">
             <img src="https://opengraph.githubassets.com/2/deceive0112/general-mike" class="w-full object-cover" />
           </a>
@@ -29,12 +32,8 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <div
-          :ref="drag1.scrollContainer"
-          @mousedown="drag1.onMouseDown"
-          @mouseleave="drag1.onMouseLeave"
-          @mouseup="drag1.onMouseUp"
-          @mousemove="drag1.onMouseMove"
+        <div :ref="drag1.scrollContainer" @mousedown="drag1.onMouseDown" @mouseleave="drag1.onMouseLeave"
+          @mouseup="drag1.onMouseUp" @mousemove="drag1.onMouseMove"
           class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
           style="scrollbar-width: none;">
           <div class="flex flex-col items-center gap-1 shrink-0">
@@ -66,11 +65,13 @@ const drag3 = useDragScroll()
             <span class="text-gray-400">Tailwind CSS</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="vscode-icons:file-type-light-shadcn" class="rounded-xl shadow-xl size-8 md:size-10 p-1 dark:invert" />
+            <UIcon name="vscode-icons:file-type-light-shadcn"
+              class="rounded-xl shadow-xl size-8 md:size-10 p-1 dark:invert" />
             <span class="text-gray-400">Shadcn UI</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="simple-icons:radixui" class="rounded-xl shadow-xl size-8 md:size-10 p-1 dark:text-white text-black" />
+            <UIcon name="simple-icons:radixui"
+              class="rounded-xl shadow-xl size-8 md:size-10 p-1 dark:text-white text-black" />
             <span class="text-gray-400">Radix UI</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
@@ -86,7 +87,7 @@ const drag3 = useDragScroll()
             <span class="text-gray-400">Bun</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:formsubmit" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">Form Submit</span>
           </div>
         </div>
@@ -94,12 +95,16 @@ const drag3 = useDragScroll()
       </div>
 
       <!-- Project 2 -->
-      <div class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
-        <p class="text-sm md:text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Vanilla Web App Notepad</p>
+      <div
+        class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
+        <p class="text-sm md:text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Vanilla Web App Notepad
+        </p>
 
-        <div class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
+        <div
+          class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://deceive0112.github.io/Vanilla-Web-App-Notepad/" target="_blank">
-            <img src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad" class="w-full object-cover" />
+            <img src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad"
+              class="w-full object-cover" />
           </a>
           <a href="https://github.com/deceive0112/Vanilla-Web-App-Notepad" target="_blank"
             class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -109,12 +114,8 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <div
-          :ref="drag2.scrollContainer"
-          @mousedown="drag2.onMouseDown"
-          @mouseleave="drag2.onMouseLeave"
-          @mouseup="drag2.onMouseUp"
-          @mousemove="drag2.onMouseMove"
+        <div :ref="drag2.scrollContainer" @mousedown="drag2.onMouseDown" @mouseleave="drag2.onMouseLeave"
+          @mouseup="drag2.onMouseUp" @mousemove="drag2.onMouseMove"
           class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
           style="scrollbar-width: none;">
           <div class="flex flex-col items-center gap-1 shrink-0">
@@ -130,14 +131,17 @@ const drag3 = useDragScroll()
             <span class="text-gray-400">JavaScript</span>
           </div>
         </div>
-        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Vanilla JS notepad web app with dynamic tasks and localStorage persistence, built using pure HTML, CSS, and JavaScript — no frameworks or libraries.</p>
+        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Vanilla JS notepad web app with dynamic tasks
+          and localStorage persistence, built using pure HTML, CSS, and JavaScript no frameworks or libraries.</p>
       </div>
 
       <!-- Project 3 -->
-      <div class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
+      <div
+        class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
         <p class="text-sm md:text-lg text-gray-400 font-semibold mb-2 uppercase tracking-widest">Work In Progress</p>
 
-        <div class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
+        <div
+          class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://deceive0112.github.io/" target="_blank">
             <img src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" />
           </a>
@@ -149,12 +153,8 @@ const drag3 = useDragScroll()
           </a>
         </div>
 
-        <div
-          :ref="drag3.scrollContainer"
-          @mousedown="drag3.onMouseDown"
-          @mouseleave="drag3.onMouseLeave"
-          @mouseup="drag3.onMouseUp"
-          @mousemove="drag3.onMouseMove"
+        <div :ref="drag3.scrollContainer" @mousedown="drag3.onMouseDown" @mouseleave="drag3.onMouseLeave"
+          @mouseup="drag3.onMouseUp" @mousemove="drag3.onMouseMove"
           class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
           style="scrollbar-width: none;">
           <div class="flex flex-col items-center gap-1 shrink-0">
