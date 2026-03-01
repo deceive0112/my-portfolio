@@ -13,26 +13,46 @@ const share = async (title: string, slug: string) => {
   }
 }
 
-// CHANGED: added slug to each post
 const posts = [
   { id: 1, title: 'Post-1', slug: 'post-1' },
   { id: 2, title: 'Post-2', slug: 'post-2' },
-  { id: 3, title: 'Post-3', slug: 'post-3' },
+  { id: 3, title: 'Mis gatos', slug: 'post-3' },
 ]
+
+const drag = useDragScroll()
 </script>
 
 <template>
   <div class="max-w-3xl mx-auto pt-15 pb-15">
 
     <div class="mb-6">
-      <div class="flex flex-wrap gap-3 p-4 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg">
+      <div :ref="drag.scrollContainer" @mousedown="drag.onMouseDown" @mouseleave="drag.onMouseLeave"
+          @mouseup="drag.onMouseUp" @mousemove="drag.onMouseMove"
+          class="flex flex-nowrap gap-3 p-4 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-x-auto cursor-grab active:cursor-grabbing select-none"
+          style="scrollbar-width: none;">
         <div
-          class="shrink-0 w-24 h-36 rounded-xl bg-sky-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          class="shrink-0 w-30 h-46 rounded-xl bg-sky-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
           <span class="text-xs text-center font-semibold">My Day 01</span>
         </div>
         <div
-          class="shrink-0 w-24 h-36 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          class="shrink-0 w-30 h-46 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
           <span class="text-xs text-center font-semibold">My Day 02</span>
+        </div>
+        <div
+          class="shrink-0 w-30 h-46 rounded-xl bg-sky-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          <span class="text-xs text-center font-semibold">My Day 03</span>
+        </div>
+        <div
+          class="shrink-0 w-30 h-46 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          <span class="text-xs text-center font-semibold">My Day 04</span>
+        </div>
+        <div
+          class="shrink-0 w-30 h-46 rounded-xl bg-sky-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          <span class="text-xs text-center font-semibold">My Day 05</span>
+        </div>
+        <div
+          class="shrink-0 w-30 h-46 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
+          <span class="text-xs text-center font-semibold">My Day 06</span>
         </div>
       </div>
     </div>

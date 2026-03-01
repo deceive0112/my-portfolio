@@ -28,7 +28,7 @@ onMounted(() => {
 const share = async () => {
   if (navigator.share) {
     await navigator.share({
-      title: 'Post 3',
+      title: 'Mi gatos',
       url: window.location.href
     })
   } else {
@@ -50,9 +50,22 @@ const share = async () => {
     <div class="rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-hidden">
 
       <div class="p-6">
-        <p class="text-xs text-gray-400 mb-2">March 1, 2026</p>
-        <h1 class="text-2xl font-bold mb-4">Post 3</h1>
-        <p class="text-base text-justify leading-relaxed">Your post content here...</p>
+        <p class="text-xs text-gray-400 mb-2">March 2, 2026</p>
+        <h1 class="text-2xl font-bold mb-4">Mis gatos</h1>
+        <p class="text-base text-justify leading-relaxed">My daily dose of serotonin 🐾</p>
+        <div class="grid grid-cols-2 gap-1 mt-5">
+          <!-- left: 1 big photo -->
+          <img src="/blog/post-3/cat-1.jpg" class="w-full h-80 object-cover rounded-tl-xl rounded-bl-xl" />
+          <!-- right: 2x2 grid -->
+          <div class="grid grid-cols-2 gap-1">
+            <img src="/blog/post-3/cat-2.jpg" class="w-full h-40 object-cover rounded-tr-xl" />
+            <img src="/blog/post-3/cat-3.jpg" class="w-full h-40 object-cover" />
+            <img src="/blog/post-3/cat-4.jpg" class="w-full h-40 object-cover" />
+            <div class="relative">
+              <img src="/blog/post-3/cat-5.jpg" class="w-full h-40 object-cover rounded-br-xl" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="border-t border-white/10 mx-4" />
