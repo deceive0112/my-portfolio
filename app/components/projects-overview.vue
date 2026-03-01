@@ -90,6 +90,10 @@ const drag3 = useDragScroll()
             <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">Form Submit</span>
           </div>
+          <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Giscus</span>
+            </div>
         </div>
         <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Test test</p>
       </div>

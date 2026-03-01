@@ -49,7 +49,6 @@ const share = async () => {
 
     <div class="rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-hidden">
 
-      <!-- post content -->
       <div class="p-6">
         <p class="text-xs text-gray-400 mb-2">March 1, 2026</p>
         <h1 class="text-2xl font-bold mb-4">Post 3</h1>
@@ -58,7 +57,6 @@ const share = async () => {
 
       <div class="border-t border-white/10 mx-4" />
 
-      <!-- action bar -->
       <div class="flex items-center px-4 py-2 gap-1">
         <button
           class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-200 flex-1 justify-center">
@@ -73,7 +71,6 @@ const share = async () => {
         </button>
       </div>
 
-      <!-- giscus -->
       <div class="px-4 pb-6 pt-3 border-t border-white/10">
         <div class="giscus" />
       </div>
