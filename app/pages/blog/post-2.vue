@@ -28,7 +28,7 @@ onMounted(() => {
 const share = async () => {
   if (navigator.share) {
     await navigator.share({
-      title: 'Post 1',
+      title: 'Post 2',
       url: window.location.href
     })
   } else {

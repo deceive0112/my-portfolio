@@ -13,13 +13,13 @@ const isHoveredEdu = ref(false)
     <div class="flex flex-col gap-2 p-3 rounded-xl backdrop-blur-2xl shadow-xl" @mouseenter="isHoveredEdu = true"
       @mouseleave="isHoveredEdu = false">
 
-      <div class="absolute left-11 md:left-13 top-0 bottom-0 w-px bg-white/20"></div>
+      <div class="absolute left-11 md:left-13 top-0 bottom-0 w-px bg-white/20 light:bg-black/20 z-0"></div>
       <!-- USTP -->
       <div class="flex items-start gap-2 md:gap-3">
         <a href="https://www.ustp.edu.ph/" target="_blank">
           <!-- CHANGED: smaller logo on mobile -->
           <img src="/school/USTP.png"
-            class="w-14 h-14 md:w-20 md:h-20 min-w-14 md:min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer" />
+            class="w-14 h-14 md:w-20 md:h-20 min-w-14 md:min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer z-10 relative" />
         </a>
         <div class="w-full">
           <p class="font-bold text-[11px] md:text-[13px] mt-2">University of Science and Technology of the Southern
@@ -47,7 +47,7 @@ const isHoveredEdu = ref(false)
           <a href="https://www.liceo.edu.ph/" target="_blank">
             <!-- CHANGED: smaller logo on mobile -->
             <img src="/school/LDCU.png"
-              class="w-14 h-14 md:w-20 md:h-20 min-w-14 md:min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer" />
+              class="w-14 h-14 md:w-20 md:h-20 min-w-14 md:min-w-20 rounded-full shadow-2xl bg-white object-contain p-1.5 shrink-0 mt-1 cursor-pointer z-10 relative" />
           </a>
           <div class="w-full">
             <p class="font-bold text-[11px] md:text-[13px] mt-2">Liceo de Cagayan University (LDCU)</p>
