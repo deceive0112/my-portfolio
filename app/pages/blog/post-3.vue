@@ -58,8 +58,8 @@ const share = async () => {
           <img src="/blog/post-3/cat-1.jpg" class="w-full h-80 object-cover rounded-tl-xl rounded-bl-xl" />
           <!-- right: 2x2 grid -->
           <div class="grid grid-cols-2 gap-1">
-            <img src="/blog/post-3/cat-2.jpg" class="w-full h-40 object-cover rounded-tr-xl" />
-            <img src="/blog/post-3/cat-3.jpg" class="w-full h-40 object-cover" />
+            <img src="/blog/post-3/cat-2.jpg" class="w-full h-40 object-cover" />
+            <img src="/blog/post-3/cat-3.png" class="w-full h-40 object-cover rounded-tr-xl" />
             <img src="/blog/post-3/cat-4.jpg" class="w-full h-40 object-cover" />
             <div class="relative">
               <img src="/blog/post-3/cat-5.jpg" class="w-full h-40 object-cover rounded-br-xl" />

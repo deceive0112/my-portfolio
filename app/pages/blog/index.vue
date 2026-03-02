@@ -27,13 +27,18 @@ const drag = useDragScroll()
 
     <div class="mb-6">
       <div :ref="drag.scrollContainer" @mousedown="drag.onMouseDown" @mouseleave="drag.onMouseLeave"
-          @mouseup="drag.onMouseUp" @mousemove="drag.onMouseMove"
-          class="flex flex-nowrap gap-3 p-4 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-x-auto cursor-grab active:cursor-grabbing select-none"
-          style="scrollbar-width: none;">
-        <div
-          class="shrink-0 w-30 h-46 rounded-xl bg-sky-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
-          <span class="text-xs text-center font-semibold">My Day 01</span>
-        </div>
+        @mouseup="drag.onMouseUp" @mousemove="drag.onMouseMove"
+        class="flex flex-nowrap gap-3 p-4 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-x-auto cursor-grab active:cursor-grabbing select-none"
+        style="scrollbar-width: none;">
+        <a href="/blog/my-day/my-day-1.png" target="_blank" draggable="false">
+          <div
+            class="relative shrink-0 w-30 h-46 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg border border-white/10">
+            <img src="/blog/my-day/my-day-1.png" class="w-full h-full object-cover" draggable="false" />
+            <div class="absolute bottom-0 left-0 right-0 bg-black/50 flex items-center justify-center py-2">
+              <span class="text-white text-xs font-semibold">02-03-26</span>
+            </div>
+          </div>
+        </a>
         <div
           class="shrink-0 w-30 h-46 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
           <span class="text-xs text-center font-semibold">My Day 02</span>

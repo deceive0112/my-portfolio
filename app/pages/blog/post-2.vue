@@ -52,7 +52,7 @@ const share = async () => {
       <div class="p-6">
         <p class="text-xs text-gray-400 mb-2">March 1, 2026</p>
         <h1 class="text-2xl font-bold mb-4">Post 2</h1>
-        <p class="text-base text-justify leading-relaxed">Your post content here...</p>
+        <p class="text-base text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
       </div>
 
       <div class="border-t border-white/10 mx-4" />
