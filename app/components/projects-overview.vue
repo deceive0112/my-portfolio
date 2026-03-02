@@ -95,7 +95,9 @@ const drag3 = useDragScroll()
               <span class="text-gray-400">Giscus</span>
             </div>
         </div>
-        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Test test</p>
+        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">A personal portfolio built with Nuxt, Vue, and Tailwind CSS. 
+          Featuring a Three.js particle background, dark/light theme, drag-scroll project cards, a blog with Giscus-powered comments, 
+          and mini-games. Deployed on Vercel with a serverless architecture..</p>
       </div>
 
       <!-- Project 2 -->
