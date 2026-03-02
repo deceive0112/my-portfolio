@@ -52,7 +52,7 @@ definePageMeta({
           <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true" @mouseleave="isHovered = false"
             @touchstart="isHovered = true" @touchend="isHovered = false">
             {{ title }}</a>
-          <span class="px-3 inline-block animate-wave">
+          <span class="px-2 md:px-3 inline-block animate-wave">
             <UIcon name="twemoji:waving-hand-light-skin-tone" class="size-7" />
           </span>
         </h1>

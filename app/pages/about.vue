@@ -2,6 +2,8 @@
 definePageMeta({
     layout: "default",
 });
+
+const flipped = ref(false)
 </script>
 
 <template>
@@ -13,9 +15,32 @@ definePageMeta({
 
             <div class="flex flex-col gap-4">
 
-                <div class="flex items-center justify-center p-4 rounded-xl backdrop-blur-xl shadow-lg">
-                    <NuxtImg src="/selfie-ghibli-style.png" loading="lazy"
-                        class="w-60 h-70 sm:w-70 sm:h-80 xl:w-80 xl:h-90 rounded-2xl shadow-lg object-cover" />
+                <div class="flex items-center justify-center p-4">
+                    <!-- flip container -->
+                    <div class="w-60 h-70 sm:w-70 sm:h-80 xl:w-80 xl:h-90 cursor-pointer" style="perspective: 1000px;"
+                        @click="flipped = !flipped" @touchstart="flipped = !flipped">
+
+                        <!-- inner — rotates -->
+                        <div class="relative w-full h-full transition-transform duration-700"
+                            style="transform-style: preserve-3d;"
+                            :style="flipped ? 'transform: rotateY(180deg)' : 'transform: rotateY(0deg)'">
+
+                            <!-- FRONT -->
+                            <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-lg"
+                                style="-webkit-backface-visibility: hidden; backface-visibility: hidden;">
+                                <NuxtImg src="/selfie-ghibli-style.png" loading="lazy"
+                                    class="w-full h-full object-cover" />
+                            </div>
+
+                            <!-- BACK -->
+                            <div class="absolute inset-0 rounded-2xl shadow-lg bg-white/10 backdrop-blur-xl border border-white/10 flex flex-col items-center justify-center gap-3"
+                                style="-webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg);">
+                                <p class="text-2xl font-bold">Maki0112</p>
+                                <p class="text-4xl font-mono text-blue-400">&lt;/&gt;</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <!-- CHANGED: spotify height reduced to 80 -->

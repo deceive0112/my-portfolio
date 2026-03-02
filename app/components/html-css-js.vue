@@ -13,7 +13,7 @@
           </div>
           <div class="flex flex-col md:flex-row md:items-center items-start justify-between gap-2">
             <p
-              class="text-lg md:text-[20px] font-semibold uppercase tracking-widest text-orange-400 inline-block typing1">
+              class="text-lg md:text-[30px] font-semibold uppercase tracking-widest text-orange-400 inline-block typing1">
               &lt;!--HTML--&gt;</p>
             <a href="/projects/to-do-list/to-do-source-code/HTML.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -34,7 +34,7 @@
           </div>
           <div class="flex flex-col md:flex-row md:items-center items-start justify-between gap-2">
             <p
-              class="text-lg md:text-[20px] font-semibold uppercase tracking-widest text-purple-400 inline-block typing2">
+              class="text-lg md:text-[30px] font-semibold uppercase tracking-widest text-purple-400 inline-block typing2">
               /*CSS*/</p>
             <a href="/projects/to-do-list/to-do-source-code/HTML-CSS.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
@@ -55,7 +55,7 @@
           </div>
           <div class="flex flex-col md:flex-row md:items-center items-center justify-between gap-2">
             <p
-              class="text-lg md:text-[20px] font-semibold uppercase tracking-widest text-blue-400 inline-block typing3">
+              class="text-lg md:text-[30px] font-semibold uppercase tracking-widest text-blue-400 inline-block typing3">
               //Javascript</p>
             <a href="/projects/to-do-list/to-do-source-code/HTML-CSS-JS.txt" target="_blank">
               <UButton icon="material-symbols:folder-open-rounded"
