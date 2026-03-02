@@ -49,8 +49,9 @@ definePageMeta({
       <div class="w-full xl:basis-3/5">
         <h1 class="text-2xl sm:text-3xl md:text-4xl mt-10 md:mt-20 font-bold backdrop-blur-lg rounded-xl p-2">
           Hey! <span class="px-1">I'm</span>
-          <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true"
-            @mouseleave="isHovered = false">{{ title }}</a>
+          <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true" @mouseleave="isHovered = false"
+            @touchstart="isHovered = true" @touchend="isHovered = false">
+            {{ title }}</a>
           <span class="px-3 inline-block animate-wave">
             <UIcon name="twemoji:waving-hand-light-skin-tone" class="size-7" />
           </span>

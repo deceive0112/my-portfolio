@@ -34,7 +34,7 @@ definePageMeta({
                 <p class="text-base md:text-2xl text-justify font-sans">
                     A <span class="underline decoration-dash decoration-rose-300">Computer Engineering</span> graduate
                     from the University of Science and Technology of the Southern
-                    Philippines (USTP), with a thesis focused on IoT a portable communication device for deaf-mute
+                    Philippines (USTP), with a thesis focused on IoT, a portable communication device for deaf-mute
                     individuals using ensemble learning.
                 </p>
 
@@ -46,7 +46,7 @@ definePageMeta({
                     <span class="underline decoration-dash decoration-violet-300">Vue/Nuxt</span> ,
                     <span class="underline decoration-dash decoration-indigo-300">Tailwind CSS</span> , and
                     <span class="underline decoration-dash decoration-blue-300">JavaScript/TypeScript</span> , while
-                    also working with hardware
+                    also working with
                     <span class="underline decoration-dash decoration-sky-300">hardware platforms</span> like
                     <span class="underline decoration-dash decoration-cyan-300">Arduino</span> ,
                     <span class="underline decoration-dash decoration-teal-300">ESP-32</span> , and
@@ -54,7 +54,7 @@ definePageMeta({
                     <span class="underline decoration-dash decoration-green-300">IoT projects</span> . I enjoy the
                     challenge of working across both
                     <span class="underline decoration-dash decoration-lime-300">software</span> and
-                    <span class="underline decoration-dash decoration-yellow-300">hardware</span> from crafting
+                    <span class="underline decoration-dash decoration-yellow-300">hardware,</span> from crafting
                     <span class="underline decoration-dash decoration-amber-300">clean</span> ,
                     <span class="underline decoration-dash decoration-orange-300">responsive UIs</span> to
                     <span class="underline decoration-dash decoration-red-200">wiring circuits</span> and
@@ -64,7 +64,7 @@ definePageMeta({
                 <p class="text-base md:text-2xl text-justify font-sans">
                     Beyond work, I love <span class="underline decoration-dash decoration-purple-200">exploring</span>
                     and <span class="underline decoration-dash decoration-blue-200">tinkering</span> with
-                    <span class="underline decoration-dash decoration-cyan-200">new technologies</span> whether it's a
+                    <span class="underline decoration-dash decoration-cyan-200">new technologies,</span> whether it's a
                     <span class="underline decoration-dash decoration-emerald-200">new framework</span> ,
                     a <span class="underline decoration-dash decoration-yellow-200">microcontroller</span> ,
                     or just something I haven't touched before. When I'm not in front of a screen,
