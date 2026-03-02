@@ -100,28 +100,28 @@ definePageMeta({
           <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
             <a href="https://github.com/deceive0112" target="_blank" class="inline-flex items-center">
               <UIcon name="mdi:github"
-                class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
+                class="size-4.5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
               <span
-                class="text-xs md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
+                class="text-[11.5px] md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">Github</span>
             </a>
           </div>
 
-          <span class="text-xs md:text-lg font-mono leading-none">|</span>
+          <span class="text-[11.5px] md:text-lg font-mono leading-none">|</span>
 
           <div class="group inline-flex items-center gap-1.5 transition-colors duration-200 cursor-pointer">
             <a href="https://www.linkedin.com/in/mike-general-256a63332/" target="_blank"
               class="inline-flex items-center">
               <UIcon name="mdi:linkedin"
-                class="size-5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
+                class="size-4.5 md:size-6 text-subtext1 group-hover:text-blue-500 transition-colors duration-200" />
               <span
-                class="text-xs md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
+                class="text-[11.5px] md:text-lg font-bold font-mono text-subtext1 group-hover:text-blue-500 transition-colors duration-200 px-1">LinkedIn</span>
             </a>
           </div>
 
-          <span class="text-xs md:text-lg font-mono leading-none">|</span>
+          <span class="text-[11.5px] md:text-lg font-mono leading-none">|</span>
 
           <a href="/about"
-            class="inline-flex items-center text-xs md:text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">
+            class="inline-flex items-center text-[11.5px] md:text-lg font-bold font-mono px-1 text-subtext1 hover:text-blue-500 transition-colors duration-200 cursor-pointer">
             More about me... ->
           </a>
         </div>
