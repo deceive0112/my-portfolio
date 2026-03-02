@@ -26,16 +26,16 @@ const flipped = ref(false)
                             :style="flipped ? 'transform: rotateY(180deg)' : 'transform: rotateY(0deg)'">
 
                             <!-- FRONT -->
-                            <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-lg"
+                            <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-xl"
                                 style="-webkit-backface-visibility: hidden; backface-visibility: hidden;">
                                 <NuxtImg src="/selfie-ghibli-style.png" loading="lazy"
                                     class="w-full h-full object-cover" />
                             </div>
 
                             <!-- BACK -->
-                            <div class="absolute inset-0 rounded-2xl shadow-lg bg-white/10 backdrop-blur-xl border border-white/10 flex flex-col items-center justify-center gap-3"
+                            <div class="absolute inset-0 rounded-2xl shadow-xl bg-white/10 backdrop-blur-xl border border-white/10 flex flex-col items-center justify-center gap-3"
                                 style="-webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg);">
-                                <p class="text-2xl font-bold">Maki0112</p>
+                                <p class="text-2xl font-bold">deceive0112</p>
                                 <p class="text-4xl font-mono text-blue-400">&lt;/&gt;</p>
                             </div>
 
