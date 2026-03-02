@@ -34,10 +34,9 @@ const share = async () => {
   }
 }
 
-//lightbox for each images
-const lightboxSrc = ref<string | null>(null)
-const openLightbox = (src: string) => lightboxSrc.value = src
-const closeLightbox = () => lightboxSrc.value = null
+//lightbox composable
+import { useLightbox } from '@/composables/useLightBox'
+const { lightboxSrc, openLightbox, closeLightbox } = useLightbox()
 </script>
 
 <template>

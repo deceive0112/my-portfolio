@@ -20,6 +20,9 @@ const posts = [
 ]
 
 const drag = useDragScroll()
+//lightbox composable
+import { useLightbox } from '@/composables/useLightBox'
+const { lightboxSrc, openLightbox, closeLightbox } = useLightbox()
 </script>
 
 <template>
@@ -30,15 +33,14 @@ const drag = useDragScroll()
         @mouseup="drag.onMouseUp" @mousemove="drag.onMouseMove"
         class="flex flex-nowrap gap-3 p-4 rounded-xl border border-white/10 backdrop-blur-xl shadow-lg overflow-x-auto cursor-grab active:cursor-grabbing select-none"
         style="scrollbar-width: none;">
-        <a href="/blog/my-day/my-day-1.png" target="_blank" draggable="false">
-          <div
-            class="relative shrink-0 w-30 h-46 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg border border-white/10">
-            <img src="/blog/my-day/my-day-1.png" class="w-full h-full object-cover" draggable="false" />
-            <div class="absolute bottom-0 left-0 right-0 bg-black/50 flex items-center justify-center py-2">
-              <span class="text-white text-xs font-semibold">02-03-26</span>
-            </div>
+        <div
+          class="relative shrink-0 w-30 h-46 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg border border-white/10">
+          <img src="/blog/my-day/my-day-1.png" class="w-full h-full object-cover" draggable="false"
+            @click="openLightbox('/blog/my-day/my-day-1.png')" />
+          <div class="absolute bottom-0 left-0 right-0 bg-black/50 flex items-center justify-center py-2">
+            <span class="text-white text-xs font-semibold">02-03-26</span>
           </div>
-        </a>
+        </div>
         <div
           class="shrink-0 w-30 h-46 rounded-xl bg-purple-500/30 border border-white/10 flex items-end justify-center p-2 cursor-pointer hover:scale-105 transition-all duration-300 shadow-lg">
           <span class="text-xs text-center font-semibold">My Day 02</span>
@@ -94,5 +96,15 @@ const drag = useDragScroll()
       </div>
 
     </div>
+    <!-- Lightbox -->
+    <Teleport to="body">
+      <Transition name="fade">
+        <div v-if="lightboxSrc"
+          class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          @click="closeLightbox">
+          <img :src="lightboxSrc" class="max-w-full max-h-full object-contain rounded-xl shadow-2xl" @click.stop />
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
