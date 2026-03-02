@@ -51,7 +51,7 @@ definePageMeta({
           Hey! <span class="px-1">I'm</span>
           <a class="text-blue-500 cursor-pointer px-1.5" @mouseenter="isHovered = true"
             @mouseleave="isHovered = false">{{ title }}</a>
-          <span class="px-3 inline-block animate-wave cursor-pointer">
+          <span class="px-3 inline-block animate-wave">
             <UIcon name="twemoji:waving-hand-light-skin-tone" class="size-7" />
           </span>
         </h1>
@@ -78,7 +78,7 @@ definePageMeta({
           <span class="text-xs md:text-[17px] truncate leading-none">Based in Cagayan de Oro City, Philippines.</span>
         </div>
 
-        <p class="text-base md:text-xl mt-5 backdrop-blur-lg rounded-xl cursor-pointer w-full p-3 text-justify">
+        <p class="text-base md:text-2xl mt-5 backdrop-blur-lg rounded-xl w-full p-3 text-justify">
           I'm a <span
             class="text-red-400 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full cursor-pointer">developer</span>
           who takes great care in crafting detailed, intuitive <span
