@@ -18,7 +18,8 @@ const drag4 = useDragScroll()
           <div
             class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
             <a href="https://general-mike.vercel.app/" target="_blank">
-              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/general-mike" class="w-full object-cover" preload/>
+              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/general-mike" class="w-full object-cover"
+                preload />
             </a>
             <a href="https://github.com/deceive0112/general-mike" target="_blank"
               class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -99,7 +100,7 @@ const drag4 = useDragScroll()
           <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">Portfolio
           </p>
           <p class="p-2 rounded-xl text-sm md:text-base text-justify mb-2">
-            A personal portfolio website built with Nuxt, Vue, and Tailwind CSS, designed to showcase software and 
+            A personal portfolio website built with Nuxt, Vue, and Tailwind CSS, designed to showcase software and
             hardware projects, technical skills, and professional background. Features include:
           </p>
           <ul class="list-disc ml-5 text-sm md:text-base space-y-1">
@@ -112,8 +113,10 @@ const drag4 = useDragScroll()
             <li>Embedded mini-games including Tic-Tac-Toe, typing speed test, and racing game</li>
           </ul>
           <p class="p-2 rounded-xl text-sm md:text-base text-justify mt-2">
-            This portfolio demonstrates frontend development with modern tooling, responsive design across all screen sizes, 
-            component-based architecture, and seamless integration of third-party services, built entirely without a traditional backend.
+            This portfolio demonstrates frontend development with modern tooling, responsive design across all screen
+            sizes,
+            component-based architecture, and seamless integration of third-party services, built entirely without a
+            traditional backend.
           </p>
         </div>
       </div>
@@ -126,7 +129,7 @@ const drag4 = useDragScroll()
             class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
             <a href="https://deceive0112.github.io/Vanilla-Web-App-Notepad/" target="_blank">
               <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad"
-                class="w-full object-cover" preload/>
+                class="w-full object-cover" preload />
             </a>
             <a href="https://github.com/deceive0112/Vanilla-Web-App-Notepad" target="_blank"
               class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -180,7 +183,8 @@ const drag4 = useDragScroll()
           <div
             class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
             <a href="https://deceive0112.github.io/TindaTrack/" target="_blank">
-              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/TindaTrack/" class="w-full object-cover" preload/>
+              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/TindaTrack/" class="w-full object-cover"
+                preload />
             </a>
             <a href="https://github.com/deceive0112/TindaTrack/" target="_blank"
               class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -194,38 +198,61 @@ const drag4 = useDragScroll()
             class="text-[7px] flex gap-2 mt-2.5 overflow-x-auto cursor-grab active:cursor-grabbing select-none"
             style="scrollbar-width: none;">
             <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">TypeScript</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">CSS</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">JavaScript</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="logos:expo-icon" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">Expo</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">NativeWind</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:reactnative" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">React Native</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:supabase" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">Supabase</span>
-          </div>
+              <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">TypeScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">CSS</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="logos:expo-icon" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Expo</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">NativeWind</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:reactnative" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">React Native</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:supabase" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Supabase</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:bun" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Bun</span>
+            </div>
           </div>
         </div>
         <div class="col-span-1 md:col-span-2">
-          <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">TindaTrack</p>
-          <p class="gap-2 p-2 rounded-xl text-sm md:text-lg text-justify">Test test</p>
+          <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">TindaTrack
+          </p>
+          <p class="p-2 rounded-xl text-sm md:text-base text-justify mb-2">
+            A mock-up test app for sari-sari store owners, built with Expo (React Native), NativeWind, and Supabase,
+            designed to explore
+            a lightweight mobile-first approach to store management. Features include:
+          </p>
+          <ul class="list-disc ml-5 text-sm md:text-base space-y-1">
+            <li>Product inventory management with stock level tracking and low stock alerts</li>
+            <li>Sales recording and daily sales monitoring</li>
+            <li>Bills and expense tracking</li>
+            <li>Dashboard with quick stats and sales overview</li>
+            <li>Visual reports and charts powered by Victory Native and React Native Skia</li>
+            <li>Receipt generation and sharing via Expo Print and Expo Sharing</li>
+            <li>Supabase-backed authentication with persistent sessions and Row Level Security</li>
+          </ul>
+          <p class="p-2 rounded-xl text-sm md:text-base text-justify mt-2">
+            This project demonstrates mobile development with React Native and Expo, utility-first styling with
+            NativeWind, form validation with
+            React Hook Form and Zod, and backend integration with Supabase, built and distributed using EAS Build.
+          </p>
         </div>
       </div>
 
@@ -236,7 +263,7 @@ const drag4 = useDragScroll()
           <div
             class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
             <a href="https://deceive0112.github.io/" target="_blank">
-              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" preload/>
+              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" preload />
             </a>
             <a href="https://github.com/deceive0112/" target="_blank"
               class="flex items-center gap-2 px-3 py-2 bg-white/5">

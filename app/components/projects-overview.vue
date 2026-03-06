@@ -22,7 +22,8 @@ const drag3 = useDragScroll()
         <div
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://general-mike.vercel.app/" target="_blank">
-            <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/general-mike" class="w-full object-cover" preload/>
+            <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/general-mike" class="w-full object-cover"
+              preload />
           </a>
           <a href="https://github.com/deceive0112/general-mike" target="_blank"
             class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -95,12 +96,14 @@ const drag3 = useDragScroll()
             <span class="text-gray-400">Form Submit</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-              <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-              <span class="text-gray-400">Giscus</span>
-            </div>
+            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+            <span class="text-gray-400">Giscus</span>
+          </div>
         </div>
-        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">A personal portfolio built with Nuxt, Vue, and Tailwind CSS. 
-          Featuring a Three.js particle background, dark/light theme, drag-scroll project cards, a blog with Giscus-powered comments, 
+        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">A personal portfolio built with Nuxt, Vue, and
+          Tailwind CSS.
+          Featuring a Three.js particle background, dark/light theme, drag-scroll project cards, a blog with
+          Giscus-powered comments,
           and mini-games. Deployed on Vercel with a serverless architecture..</p>
       </div>
 
@@ -114,7 +117,7 @@ const drag3 = useDragScroll()
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://deceive0112.github.io/Vanilla-Web-App-Notepad/" target="_blank">
             <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/Vanilla-Web-App-Notepad"
-              class="w-full object-cover" preload/>
+              class="w-full object-cover" preload />
           </a>
           <a href="https://github.com/deceive0112/Vanilla-Web-App-Notepad" target="_blank"
             class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -153,7 +156,8 @@ const drag3 = useDragScroll()
         <div
           class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
           <a href="https://deceive0112.github.io/TindaTrack/" target="_blank">
-            <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/TindaTrack/" class="w-full object-cover" preload/>
+            <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/TindaTrack/" class="w-full object-cover"
+              preload />
           </a>
           <a href="https://github.com/deceive0112/TindaTrack/" target="_blank"
             class="flex items-center gap-2 px-3 py-2 bg-white/5">
@@ -195,8 +199,16 @@ const drag3 = useDragScroll()
             <UIcon name="devicon:supabase" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">Supabase</span>
           </div>
+          <div class="flex flex-col items-center gap-1 shrink-0">
+            <UIcon name="devicon:bun" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+            <span class="text-gray-400">Bun</span>
+          </div>
         </div>
-        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">Test test</p>
+        <p class="gap-2 p-2 rounded-xl text-xs md:text-sm text-justify">A mock-up test app for a small store inventory
+          and sales tracking system,
+          built with Expo (React Native), NativeWind, Supabase, and Victory Native. Exploring a lightweight mobile-first
+          approach for sari-sari store
+          owners to track products, sales, and bills in one place.</p>
       </div>
 
       <div class="flex justify-end col-span-1 md:col-span-2 lg:col-span-3">
