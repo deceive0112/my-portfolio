@@ -235,7 +235,7 @@ const drag4 = useDragScroll()
           <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">TindaTrack
           </p>
           <p class="p-2 rounded-xl text-sm md:text-base text-justify mb-2">
-            A mock-up test app for sari-sari store owners, built with Expo (React Native), NativeWind, and Supabase,
+            A mock-up test app for small store owners, built with Expo (React Native), NativeWind, and Supabase,
             designed to explore
             a lightweight mobile-first approach to store management. Features include:
           </p>
