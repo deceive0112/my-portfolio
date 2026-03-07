@@ -70,7 +70,7 @@ const isHoveredEdu = ref(false)
       </Transition>
 
       <div class="ml-auto">
-        <a href="/school/General-Mike_CV.pdf" target="_blank">
+        <a href="/school/General-Mike_CV_Online.pdf" target="_blank">
           <UButton icon="material-symbols:download-rounded"
             class="rounded-lg shadow-md mt-3 cursor-pointer bg-linear-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 transition-all duration-200 border-0 text-xs md:text-sm">
             View Full Resume
