@@ -252,14 +252,14 @@ const drag4 = useDragScroll()
           class="p-3 rounded-xl shadow-md transition-all duration-300 hover:shadow-sky-500/20 hover:shadow-lg hover:bg-white/5">
           <div
             class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border border-white/10">
-            <a href="https://deceive0112.github.io/" target="_blank">
-              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" preload />
+            <a href="https://groupad.vercel.app/" target="_blank">
+              <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/Groupad" class="w-full object-cover" preload />
             </a>
-            <a href="https://github.com/deceive0112/" target="_blank"
+            <a href="https://github.com/deceive0112/Groupad" target="_blank"
               class="flex items-center gap-2 px-3 py-2 bg-white/5">
               <UIcon name="mdi:github" class="size-4 text-gray-400" />
               <span class="text-xs text-gray-400">github.com</span>
-              <span class="text-xs font-bold ml-1 truncate">deceive0112/work-in-progress</span>
+              <span class="text-xs font-bold ml-1 truncate">deceive0112/Groupad</span>
             </a>
           </div>
           <div :ref="drag4.scrollContainer" @mousedown="drag4.onMouseDown" @mouseleave="drag4.onMouseLeave"
@@ -281,9 +281,24 @@ const drag4 = useDragScroll()
           </div>
         </div>
         <div class="col-span-1 md:col-span-2">
-          <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">Work In
-            Progress</p>
-          <p class="gap-2 p-2 rounded-xl text-sm md:text-lg text-justify">Test test</p>
+          <p class="text-md md:text-xl text-gray-400 font-semibold uppercase tracking-widest text-left mt-2">Group+pad (WIP)</p>
+          <p class="p-2 rounded-xl text-sm md:text-base text-justify mb-2">
+            A collaborative note-taking and planning app for groups of all sizes, designed to explore a structured yet flexible approach 
+            to group coordination and shared productivity. Features include:
+          </p>
+          <ul class="list-disc ml-5 text-sm md:text-base space-y-1">
+            <li>Shared group notepads with real-time collaboration and role-based interaction across two modes — 
+              Professional (admin-controlled) and Group (open peer collaboration)</li>
+            <li>Shared calendar for planning events and trips with reactions, pins, and proximity notifications</li>
+            <li>Public post sharing where users can share notes and calendar plans for others to react to</li>
+            <li>Poke system to get noticed and build a list of users to invite into a Group+pad</li>
+            <li>Follow system with optional privacy to hide who you follow</li>
+            <li>Text-and-link-only design to keep communities focused and healthy</li>
+          </ul>
+          <p class="p-2 rounded-xl text-sm md:text-base text-justify mt-2">
+            This project demonstrates group-based collaboration with role management, a shared calendar with notification support, 
+            and a lightweight social layer built around a text-first content policy.
+          </p>
         </div>
       </div>
 

@@ -9,14 +9,14 @@ const { scrollContainer, onMouseDown, onMouseLeave, onMouseUp, onMouseMove } = u
         <div class="p-3 rounded-xl backdrop-blur-sm shadow-xl hover:shadow-gray-300/10">
             <div
                 class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-102 transition-all duration-300 cursor-pointer border border-white/10">
-                <a href="" target="_blank">
-                    <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/" class="w-full object-cover" preload/>
+                <a href="https://groupad.vercel.app/" target="_blank">
+                    <NuxtImg src="https://opengraph.githubassets.com/2/deceive0112/Groupad" class="w-full object-cover" preload/>
                 </a>
-                <a href="https://github.com/deceive0112/" target="_blank"
+                <a href="https://github.com/deceive0112/Groupad" target="_blank"
                     class="flex items-center gap-2 px-3 py-2 bg-white/5">
                     <UIcon name="mdi:github" class="size-4 text-gray-400" />
                     <span class="text-2xs md:text-lg text-gray-400">github.com</span>
-                    <span class="text-2xs md:text-lg font-bold ml-1 truncate">deceive0112/work in progress</span>
+                    <span class="text-2xs md:text-lg font-bold ml-1 truncate">deceive0112/Groupad</span>
                 </a>
             </div>
 
@@ -76,7 +76,9 @@ const { scrollContainer, onMouseDown, onMouseLeave, onMouseUp, onMouseMove } = u
                 </div>
             </div>
 
-            <p class="gap-2 p-2 rounded-xl text-sm md:text-lg mt-1 text-justify">Test test</p>
+            <p class="gap-2 p-2 rounded-xl text-sm md:text-lg mt-1 text-justify">Group+pad brings your people together in one shared space, 
+                collaborate on notes, assign and track tasks, plan upcoming events, and follow creators you love. Built for everything from 
+                casual friend groups to structured teams and classrooms.</p>
         </div>
     </div>
 </template>
