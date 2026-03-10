@@ -192,10 +192,6 @@ const drag4 = useDragScroll()
               <span class="text-gray-400">TypeScript</span>
             </div>
             <div class="flex flex-col items-center gap-1 shrink-0">
-              <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-              <span class="text-gray-400">CSS</span>
-            </div>
-            <div class="flex flex-col items-center gap-1 shrink-0">
               <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
               <span class="text-gray-400">JavaScript</span>
             </div>
@@ -204,7 +200,7 @@ const drag4 = useDragScroll()
               <span class="text-gray-400">Expo</span>
             </div>
             <div class="flex flex-col items-center gap-1 shrink-0">
-              <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <UIcon name="hugeicons:tailwindcss" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
               <span class="text-gray-400">NativeWind</span>
             </div>
             <div class="flex flex-col items-center gap-1 shrink-0">
@@ -271,13 +267,38 @@ const drag4 = useDragScroll()
               <span class="text-gray-400">Vue</span>
             </div>
             <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">CSS</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:html5" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">HTML</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:typescript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">TypeScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:javascript" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
               <UIcon name="devicon:nuxtjs" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
               <span class="text-gray-400">Nuxt</span>
+            </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="hugeicons:shadcn" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Shadcn UI</span>
             </div>
             <div class="flex flex-col items-center gap-1 shrink-0">
               <UIcon name="devicon:tailwindcss" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
               <span class="text-gray-400">Tailwind CSS</span>
             </div>
+            <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:bun" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-gray-400">Bun</span>
+            </div>
+            
           </div>
         </div>
         <div class="col-span-1 md:col-span-2">

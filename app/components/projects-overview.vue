@@ -170,15 +170,11 @@ const drag3 = useDragScroll()
             <span class="text-gray-400">JavaScript</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="devicon:css" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
-            <span class="text-gray-400">CSS</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 shrink-0">
             <UIcon name="logos:expo-icon" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">Expo</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <UIcon name="" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+            <UIcon name="hugeicons:tailwindcss" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
             <span class="text-gray-400">NativeWind</span>
           </div>
           <div class="flex flex-col items-center gap-1 shrink-0">

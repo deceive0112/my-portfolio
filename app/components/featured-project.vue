@@ -5,7 +5,7 @@ const { scrollContainer, onMouseDown, onMouseLeave, onMouseUp, onMouseMove } = u
 <template>
     <div class="col-span-1 lg:col-span-3 lg:mr-10 w-full max-w-2xl lg:max-w-none">
         <h2 class="flex text-2xl md:text-3xl uppercase font-bold items-center text-center justify-center mb-1">Featured
-            Project</h2>
+            Project (WIP)</h2>
         <div class="p-3 rounded-xl backdrop-blur-sm shadow-xl hover:shadow-gray-300/10">
             <div
                 class="flex flex-col rounded-xl overflow-hidden shadow-xl hover:scale-102 transition-all duration-300 cursor-pointer border border-white/10">
@@ -73,9 +73,29 @@ const { scrollContainer, onMouseDown, onMouseLeave, onMouseUp, onMouseMove } = u
                         <span class="text-gray-400 text-center">Nuxt</span>
                     </div>
 
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="hugeicons:shadcn" class="size-12 rounded-2xl" />
+                        </div>
+                        <span class="text-gray-400 text-center">Shadcn UI</span>
+                    </div>
+
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:tailwindcss" class="size-12 rounded-2xl" />
+                        </div>
+                        <span class="text-gray-400 text-center">Tailwind</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 shrink-0 w-12">
+                        <div class="flex items-center justify-center w-15 h-15">
+                            <UIcon name="devicon:bun" class="size-12 rounded-2xl" />
+                        </div>
+                        <span class="text-gray-400 text-center">Bun</span>
+                    </div>
+
                 </div>
             </div>
-
+            <p class="p-2 rounded-xl text-sm md:text-xl mt-1">Work In Progress</p>
             <p class="gap-2 p-2 rounded-xl text-sm md:text-lg mt-1 text-justify">Group+pad brings your people together in one shared space, 
                 collaborate on notes, assign and track tasks, plan upcoming events, and follow creators you love. Built for everything from 
                 casual friend groups to structured teams and classrooms.</p>
