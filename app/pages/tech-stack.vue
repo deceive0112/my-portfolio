@@ -161,6 +161,15 @@ definePageMeta({
           <div
             class="flex items-center gap-1.5 p-1.5 rounded-xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/5 hover:scale-105 transition-all duration-300 backdrop-blur-xl shadow-lg">
             <div class="flex flex-col items-center gap-1 shrink-0">
+              <UIcon name="devicon:supabase" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
+              <span class="text-[7px] text-gray-400">Supabase</span>
+            </div>
+            <p class="text-[10px] text-left">User authentication, Postgres database, Edge functions.</p>
+          </div>
+
+          <div
+            class="flex items-center gap-1.5 p-1.5 rounded-xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/5 hover:scale-105 transition-all duration-300 backdrop-blur-xl shadow-lg">
+            <div class="flex flex-col items-center gap-1 shrink-0">
               <UIcon name="simple-icons:tanstack" class="rounded-xl shadow-xl size-8 md:size-10 p-1" />
               <span class="text-[7px] text-gray-400">TanStack Q</span>
             </div>
